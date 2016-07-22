@@ -1,0 +1,34 @@
+.header-component {
+}
+.glyphicon {
+  font-size: 2em;
+  color: #ffffff;
+}
+.navbar-default {
+    background: #1f3d7a !important;
+}
+.navbar-brand, .navbar-collapse {
+  color: #ffffff !important;
+  font-weight: bolder;
+
+}
+
+.navbar-nav .active:after {
+  content: "";
+  border: none;
+}
+.navbar-nav > li:after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  top: 30%;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li:after {
+    border-right: 1px solid #ffffff;
+    right: 0;
+  }
+  .navbar-nav > li:last-child:after {
+    border: none;
+  }
+}
