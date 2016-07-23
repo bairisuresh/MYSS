@@ -7,7 +7,7 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import HeaderComponent from 'components//HeaderComponent.js';
+import HeaderComponent from 'components/HeaderComponent';
 
 describe('HeaderComponent', () => {
   let component;

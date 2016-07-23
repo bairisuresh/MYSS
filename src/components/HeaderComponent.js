@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import { Glyphicon } from 'react-bootstrap';
-require('styles//Header.scss');
+require('styles/Header.scss');
 class HeaderComponent extends React.Component {
   render() {
     return (

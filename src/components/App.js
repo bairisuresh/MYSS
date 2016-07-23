@@ -2,9 +2,8 @@ import React from 'react'
 import Header from './HeaderComponent'
 
 const App = () => (
-  <div>
+  <div id="myssApp">
     <Header />
-
   </div>
 )
 

@@ -1,8 +1,11 @@
+'use strict';
 import { combineReducers } from 'redux';
-import todos from './todos';
-import visibilityFilter from './visibilityFilter';
-const todoApp = combineReducers({
-  todos,
-  visibilityFilter
-});
-export default todoApp;
+const reducers = (state={path : 'home'},action) =>{
+	switch(action.type){
+		case 'iviews':
+			return{path:'iviews'};
+		default :
+			return {path : 'home'};
+	}
+}
+export default combineReducers(reducers);
