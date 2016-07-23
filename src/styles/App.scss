@@ -1,0 +1,22 @@
+/* Base Application Styles */
+
+/*Dont got more than four levels deep in sassy format*/
+html{
+  color: #fff;
+  background: #fff;
+  height: 100%;
+  margin-left: 2%;
+  width: 96%;
+
+  body {
+    color: #000;
+    background: #fff;
+    height: 100%;
+
+    .app-component{
+      height: 100%;
+    }
+
+  }
+
+}
