@@ -2,7 +2,6 @@ const redux = require('redux');
 const reducers = require('../reducers');
 
 module.exports = function(initialState) {
-	console.log('reducer logged=> ',reducers);
   const store = redux.createStore(reducers, initialState)
 
   if (module.hot) {
