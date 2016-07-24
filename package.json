@@ -69,6 +69,7 @@
     "object-assign": "^4.1.0",
     "react": "^15.0.0",
     "react-bootstrap": "^0.29.5",
+    "react-datagrid": "^2.1.1",
     "react-dom": "^15.0.0",
     "react-expandable-nav": "^0.1.19",
     "react-headroom": "^2.1.1",
