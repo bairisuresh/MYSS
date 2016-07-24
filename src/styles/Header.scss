@@ -1,6 +1,10 @@
 .header-component {
   height: 8%;
   width: 100%;
+  border-radius: none;
+  .navbar{
+    margin:0%;
+  }
 }
 .glyphicon {
   font-size: 1em;
