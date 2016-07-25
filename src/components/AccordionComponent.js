@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { Accordion, Panel } from 'react';
+import { Accordion, Panel } from 'react-bootstrap/lib';
 require('styles//Accordion.scss');
 
 class AccordionComponent extends React.Component {
@@ -9,13 +9,13 @@ class AccordionComponent extends React.Component {
     return (
       <div className="accordion-component">
           <Accordion>
-             <Panel header="Collapsible Group Item #1" eventKey="1">
+             <Panel header="Accounting" eventKey="1">
              sfdfdsfdsfdsf
              </Panel>
-             <Panel header="Collapsible Group Item #2" eventKey="2">
+             <Panel header="Custody" eventKey="2">
              sdfdsfdsfdsfdsfdsf
              </Panel>
-             <Panel header="Collapsible Group Item #3" eventKey="3">
+             <Panel header="Investment Record Keeping" eventKey="3">
              sfsdfdsfdsfdsfdfs
              </Panel>
             </Accordion>
