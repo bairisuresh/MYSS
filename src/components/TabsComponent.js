@@ -1,18 +1,23 @@
 'use strict';
 
 import React from 'react';
-import  { Tabs }  from 'react'
-
+import TabPanel, { TabStrip } from 'react-tab-panel'
+import 'react-tab-panel/index.css'
 require('styles//Tabs.scss');
 
 class TabsComponent extends React.Component {
   render() {
     return (
-        <Tabs defaultActiveKey={1} animation={false} id="noanim-tab-example">
-            <Tab eventKey={1} title="Tab 1">Tab 1 content</Tab>
-            <Tab eventKey={2} title="Tab 2">Tab 2 content</Tab>
-            <Tab eventKey={3} title="Tab 3" disabled>Tab 3 content</Tab>
-         </Tabs>
+        <TabPanel>
+          <div tabTitle="Recent">
+            Lorem ipsum Veniam aliquip esse ex nulla anim aliquip et in
+            dolore consectetur dolor aliqua dolor consectetur fugiat in Excepteur voluptate.
+          </div>
+
+          <div tabTitle="Favorites">
+            Lorem ipsum Sunt nisi sint.
+          </div>
+        </TabPanel>
     );
   }
 }
