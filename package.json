@@ -73,6 +73,7 @@
     "react-dom": "^15.0.0",
     "react-expandable-nav": "^0.1.19",
     "react-headroom": "^2.1.1",
+    "react-motion-menu": "^0.2.2",
     "react-redux": "^4.4.5",
     "react-tab-panel": "^2.2.2",
     "redux": "^3.5.2"

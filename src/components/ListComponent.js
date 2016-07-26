@@ -3,7 +3,7 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
-
+import MotionMenuComponent from './MotionMenuComponent'
 require('styles//List.scss');
 
 class ListComponent extends React.Component {
@@ -17,6 +17,7 @@ class ListComponent extends React.Component {
                   <ListGroupItem key={list.id}>
                             {list.activityName},
                             {list.activityDate},
+                            <MotionMenuComponent className="motionmenu"/>
                    </ListGroupItem>
               );
             })
