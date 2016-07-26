@@ -1,26 +1,49 @@
 'use strict';
 
 import React from 'react';
-import TabPanel, { TabStrip } from 'react-tab-panel'
+import ListComponent from './ListComponent'
+import TabPanel from 'react-tab-panel'
 import 'react-tab-panel/index.css'
 require('styles//Tabs.scss');
 
-class TabsComponent extends React.Component {
-  render() {
-    return (
-        <TabPanel>
-          <div tabTitle="Recent">
-            Lorem ipsum Veniam aliquip esse ex nulla anim aliquip et in
-            dolore consectetur dolor aliqua dolor consectetur fugiat in Excepteur voluptate.
-          </div>
+var TabsComponent = React.createClass ({
+    loadListData: function() {
+      $.ajax({
+        url: './sources/griddata.json',
+        dataType: 'json',
+        success: function(data) {
+          this.setState({data: data});
+        }.bind(this),
+        error: function(xhr, status, err) {
+          console.error('#GET Error', status, err.toString());
+        }.bind(this)
+      });
+    },
 
-          <div tabTitle="Favorites">
-            Lorem ipsum Sunt nisi sint.
-          </div>
-        </TabPanel>
-    );
-  }
-}
+    getInitialState: function(){
+        return {
+         data: {
+            listdata: []
+         }
+      };
+    },
+
+    componentDidMount: function() {
+      this.loadListData();
+    },
+     render() {
+        return (
+            <TabPanel>
+              <div className="tabs-component" tabTitle="Recent">
+                <ListComponent data={this.state.data}/>
+              </div>
+              <div tabTitle="Favorites">
+            //     Lorem ipsum Sunt nisi sint.
+              </div>
+            </TabPanel>
+        );
+      }
+});
 
 TabsComponent.displayName = 'TabsComponent';
 

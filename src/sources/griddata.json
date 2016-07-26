@@ -1,34 +1,23 @@
-[
+{"listdata": [
   {
     "id": "1",
-    "firstName": "John",
-    "lastName": "Bobson",
-    "city": "hyd",
-    "country": "india",
-    "email": "test@gmail.com"
+    "activityName": "John",
+    "activityDate": "12/02/16"
   },
   {
     "id": "2",
-    "firstName": "John",
-    "lastName": "Bobson",
-    "city": "hyd",
-    "country": "india",
-    "email": "test@gmail.com"
+    "activityName": "fdsfdsf",
+    "activityDate": "09/07/16"
   },
   {
     "id": "3",
-    "firstName": "John",
-    "lastName": "Bobson",
-    "city": "hyd",
-    "country": "india",
-    "email": "test@gmail.com"
+    "activityName": "Jodfsdsfhn",
+    "activityDate": "05/07/16"
   },
   {
     "id": "4",
-    "firstName": "John",
-    "lastName": "Bobson",
-    "city": "hyd",
-    "country": "india",
-    "email": "test@gmail.com"
+    "activityName": "qweqwe",
+    "activityDate": "23/01/15"
   }
 ]
+}

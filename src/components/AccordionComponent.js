@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Accordion, Panel } from 'react-bootstrap/lib';
+import InnerAccordionComponent from './InnerAccordionComponent'
 require('styles//Accordion.scss');
 
 class AccordionComponent extends React.Component {
@@ -10,13 +11,13 @@ class AccordionComponent extends React.Component {
       <div className="accordion-component">
           <Accordion>
              <Panel header="Accounting" eventKey="1">
-             sfdfdsfdsfdsf
+                 <InnerAccordionComponent />
              </Panel>
              <Panel header="Custody" eventKey="2">
-             sdfdsfdsfdsfdsfdsf
+                 <InnerAccordionComponent />
              </Panel>
              <Panel header="Investment Record Keeping" eventKey="3">
-             sfsdfdsfdsfdsfdfs
+                 <InnerAccordionComponent />
              </Panel>
             </Accordion>
       </div>

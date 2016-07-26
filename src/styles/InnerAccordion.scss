@@ -1,0 +1,103 @@
+$lightred: #f8f8f8;
+$red: #1b2f5c;
+$darkred: #f8f8f8;
+
+.main {
+  position: relative;;
+  background: $lightred;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  border-bottom: 5px solid $darkred;
+  border-left: 2px solid $darkred;
+  border-right: 2px solid $darkred;
+  button {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: 3em;
+    width: 3em;
+    outline: 0;
+    border: 0;
+    background: none;
+    text-indent: -9999%;
+    pointer-events: none;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 12px;
+      width: 4px;
+      border-radius: .3em;
+      background: $red;
+      transform-origin: 50%;
+      top: 50%;
+      left: 50%;
+      transition: all .25s ease-in-out;
+      transform: translate(75%, -50%) rotate(45deg);
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 12px;
+      width: 4px;
+      border-radius: .3em;
+      background: $red;
+      transform-origin: 50%;
+      top: 50%;
+      left: 50%;
+      transition: all .25s ease-in-out;
+      transform: translate(-75%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.section.open {
+  button {
+    &:before, &:after {
+      height: 14px;
+    }
+    &:before {
+      transform: translate(75%, -50%) rotate(-45deg);
+    }
+    &:after {
+      transform: translate(-75%, -50%) rotate(45deg);
+    }
+  }
+  .articlewrap {
+    height: 120px;
+  }
+}
+
+.articlewrap {
+  height: 0;
+  overflow: hidden;
+  transition: all .2s ease-in;
+}
+
+.sectionhead {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1em;
+  padding-right: 2.1em;
+  font-family: DINOffc;
+  font-size: 14px;
+  font-weight: normal;
+  color: #19315b;
+}
+
+.article {
+  padding: 1em;
+  color: #333;
+  line-height: 1.3;
+}
