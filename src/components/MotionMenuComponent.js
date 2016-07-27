@@ -12,8 +12,8 @@ class MotionMenuComponent extends React.Component {
                 <Menu
                   direction="horizontal"
                   distance={-40}
-                  width={35}
-                  height={35}
+                  width={30}
+                  height={30}
                   y={-5}
                   x={150}
                   customStyle={{

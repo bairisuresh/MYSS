@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-
+import ListData from '../Containers/ListData'
 require('styles//InnerAccordion.scss');
 
 var Section = React.createClass({
@@ -44,10 +44,13 @@ var InnerAccordionComponent = React.createClass({
     return (
       <div className="main">
         <Section title="Income">
+            <ListData title={"income"}/>
         </Section>
         <Section title="Positions">
+            <ListData title={"positions"}/>
         </Section>
         <Section title="Trades">
+            <ListData title={"trades"}/>
         </Section>
       </div>
     );
