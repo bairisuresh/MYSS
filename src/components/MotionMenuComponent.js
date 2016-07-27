@@ -11,11 +11,11 @@ class MotionMenuComponent extends React.Component {
               <div>
                 <Menu
                   direction="horizontal"
-                  distance={70}
-                  width={50}
-                  height={50}
-                  y={500}
-                  x={100}
+                  distance={-60}
+                  width={35}
+                  height={35}
+                  y={-5}
+                  x={10}
                   customStyle={{
                     color: "#fff",
                     textAlign:"center",
@@ -24,8 +24,9 @@ class MotionMenuComponent extends React.Component {
                     border: "solid 1px #16A085",
                     borderRadius: "50%"
                   }}>
-                  <i className="bars"></i>  // button
-                  <i className="home"></i>
+                  <i className="bars"></i>
+                  <a href="http://google.com"><i className="home"></i></a>
+                  <a href="http://google.com"><i className="heart"></i></a>
                 </Menu>
               </div>
     );

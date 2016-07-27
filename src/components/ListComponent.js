@@ -4,6 +4,7 @@ import React from 'react';
 import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import MotionMenuComponent from './MotionMenuComponent'
+import { Col, Row } from 'react-bootstrap/lib'
 require('styles//List.scss');
 
 class ListComponent extends React.Component {
@@ -15,9 +16,12 @@ class ListComponent extends React.Component {
             this.props.data.listdata.map(function(list) {
               return (
                   <ListGroupItem key={list.id}>
-                            {list.activityName},
-                            {list.activityDate},
-                            <MotionMenuComponent className="motionmenu"/>
+                          <Row className="show-grid">
+                              <Col sm={1} md={1}></Col>
+                              <Col sm={4} md={4}>{list.activityName}</Col>
+                              <Col sm={3} md={3}>{list.activityDate}</Col>
+                              <Col sm={4} md={4}><MotionMenuComponent/></Col>
+                          </Row>
                    </ListGroupItem>
               );
             })
