@@ -11,11 +11,11 @@ class MotionMenuComponent extends React.Component {
               <div>
                 <Menu
                   direction="horizontal"
-                  distance={-60}
+                  distance={-40}
                   width={35}
                   height={35}
                   y={-5}
-                  x={10}
+                  x={150}
                   customStyle={{
                     color: "#fff",
                     textAlign:"center",
