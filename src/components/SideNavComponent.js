@@ -1,6 +1,6 @@
 import React from 'react';
 import SideBar from './SliderComponent'
-import Content from './SliderContentComponent'
+import Content from './BodyComponent'
 import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
     ExpandableNavMenu, ExpandableNavMenuItem, ExpandableNavPage,
     ExpandableNavToggleButton } from 'react-expandable-nav';
@@ -28,9 +28,12 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
             <span>About us</span>,
             <span>Contact us</span>
         ]
-      };
+      },navPageStyle = {
+          full: {height: "100%",paddingLeft:"3%"},
+          small: {height: "100%",paddingLeft:"3%"}
+        };
       return (
-        <ExpandableNavContainer>
+        <ExpandableNavContainer className="height100">
           <ExpandableNavbar>
             <ExpandableNavMenu>
               <ExpandableNavMenuItem small={menuItems.small[0]} full={menuItems.full[0]} onClick={this.handleViewSidebar}/>
@@ -42,9 +45,9 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
             </ExpandableNavMenu>
           </ExpandableNavbar>
           <ExpandableNavToggleButton />
-          <ExpandableNavPage>
+          <ExpandableNavPage fullStyle={navPageStyle.full} smallStyle={navPageStyle.small}>
                 <SideBar isOpen={this.state.sidebarOpen} />
-                <Content isOpen={this.state.sidebarOpen} />
+                <Content  isOpen={this.state.sidebarOpen} />
           </ExpandableNavPage>
         </ExpandableNavContainer>
       );

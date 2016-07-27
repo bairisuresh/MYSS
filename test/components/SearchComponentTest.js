@@ -7,16 +7,16 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import SideNavComponent from 'components//SideNavComponent.js';
+import SearchComponent from 'components//SearchComponent.js';
 
-describe('SideNavComponent', () => {
+describe('SearchComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(SideNavComponent);
+    component = createComponent(SearchComponent);
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('sidenav-component');
+    expect(component.props.className).to.equal('search-component');
   });
 });
