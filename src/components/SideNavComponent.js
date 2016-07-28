@@ -16,12 +16,12 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
     render() {
       var menuItems = {
         small: [
-                <span className="glyphicon glyphicon-home"></span>,
-                <span className="glyphicon glyphicon-user"></span>,
-                <span className="glyphicon glyphicon-home"></span>,
-                <span className="glyphicon glyphicon-home"></span>,
-                <span className="glyphicon glyphicon-home"></span>,
-                <span className="glyphicon glyphicon-home"></span>
+                <span className="icon home-icon"></span>,
+                <span className="icon analysis-icon"></span>,
+                <span className="icon interaction-icon"></span>,
+                <span className="icon reports-icon"></span>,
+                <span className="icon services-icon"></span>,
+                <span className="icon settings-icon"></span>
             ],
         full: [
             <span>Home</span>,
@@ -29,12 +29,12 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
             <span>Contact us</span>
         ]
       },navPageStyle = {
-          full: {height: "100%",paddingLeft:"3%"},
-          small: {height: "100%",paddingLeft:"3%"}
+          full: {height: "100%",paddingLeft:"56px"},
+          small: {height: "100%",paddingLeft:"56px"}
         };
       return (
         <ExpandableNavContainer className="height100">
-          <ExpandableNavbar>
+          <ExpandableNavbar className="sidebarMenu">
             <ExpandableNavMenu>
               <ExpandableNavMenuItem small={menuItems.small[0]} full={menuItems.full[0]} onClick={this.handleViewSidebar}/>
               <ExpandableNavMenuItem small={menuItems.small[1]} full={menuItems.full[1]} onClick={this.handleViewSidebar}/>

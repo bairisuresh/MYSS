@@ -1,5 +1,68 @@
+.headroom-wrapper{
+  height: 56px !important;
+}.headroom{
+  position: fixed !important;
+  .navbar-default {
+    background: #0a2f5d !important;
+   border: none;
+   border-radius: 0;
+   .container{
+     width: 100%;
+     padding: 0;
+   }
+   .menu-icon{
+     display: table-cell;
+      height: 56px;
+      vertical-align: middle;
+      width: 56px;
+      float: left;
+      margin-right: 15px;
+      background: url('../images/menu.svg') no-repeat center;
+      background-size: 24px 16px;
+   }
+   .navbar-brand{
+      width: 170px;
+      height: auto;
+      padding: 15px;
+    }
+    .navbar-nav{
+      a{
+        display: table-cell;
+        height: 56px;
+        vertical-align: middle;
+        padding: 0 25px;
+        span{
+          color: #fff;
+          font-size: 12px;  
+          font-weight: normal;
+        }
+        .icon{
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 24px;
+          width: 24px;
+          display: block;
+        }
+        .icon.header-search-icon{
+          background-image: url('../images/search-white.svg');
+          background-size: 24px;
+        }
+        .icon.header-bell-icon{
+          background-image: url('../images/notify-bell.svg');
+          background-size: 21.1px 24px;
+        }
+        .icon.header-user-icon{
+          background-image: url('../images/user.svg');
+          background-size: 36px;
+          height: 36px;
+          width: 36px;
+        }
+      }
+    }
+  }
+}
+
 .header-component {
-  
   width: 100%;
   border-radius: none;
   .navbar{
@@ -10,13 +73,10 @@
   font-size: 1em;
   color: #ffffff;
 }
-.navbar-default {
-    background: #0a2f5d !important;
-}
+
 .navbar-brand, .navbar-collapse {
   color: #ffffff !important;
   font-weight: bolder;
-
 }
 
 .navbar-nav .active:after {

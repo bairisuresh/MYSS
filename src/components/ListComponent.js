@@ -15,7 +15,7 @@ class ListComponent extends React.Component {
     handleChange(e) {
     //   const title = e.target.value;
     //   this.props.changeTitle(title);
-    alert("clicked");
+    // alert("clicked");
     }
   render() {
     return (
@@ -26,7 +26,7 @@ class ListComponent extends React.Component {
               return (
                   <ListGroupItem key={list.id}>
                           <Row className="show-grid">
-                              <Col sm={1} md={1}></Col>
+                              <Col sm={1} md={1}><img src="images/pie-chart.svg" width="20"/></Col>
                               <Col sm={4} md={4} >{list.activityName}</Col>
                               <Col sm={3} md={3}>{list.activityDate}</Col>
                               <Col sm={4} md={4}><MotionMenuComponent/></Col>

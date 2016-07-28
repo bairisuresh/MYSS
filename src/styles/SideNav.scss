@@ -1,10 +1,74 @@
 div.navbar.navbar-inverse {
     position: fixed !important;
-    top: 50px !important;
+    top: 56px !important;
     height: 100%;
     border: none !important;
     left:auto !important;
 }
 .height100{
 	height : 100%;
+}
+.sidebarMenu.navbar.navbar-inverse{
+  background: #1587ac;
+  width: 56px !important;
+  
+  li{
+    text-align: center;
+    display: block;
+    &.active{
+      &:after{
+        border-left: 4px solid #8dd3ee; 
+        height: 100%;
+        left: 0;
+        top:0;
+      }
+      a{
+        background: #017299;
+      }
+    }
+    a{
+      border: none;
+      display: table-cell;
+      height: 64px;
+      vertical-align: middle;
+      width: 56px;
+      span{
+        padding: 0 !important;
+      }
+      .icon{
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 64px;
+        width: 100%;
+      }
+      .icon.home-icon{
+          background-image: url('../images/home-icon.svg');
+          background-size: 26px 22px;
+      }
+      .icon.analysis-icon{
+          background-image: url('../images/analysis-icon.svg');
+          background-size: 25px 20px;
+      }
+      .icon.interaction-icon{
+          background-image: url('../images/interaction-icon.svg');
+          background-size: 24px 34px;
+      }
+      .icon.reports-icon{
+          background-image: url('../images/reports-icon.svg');
+          background-size: 21px 20px;
+      }
+      .icon.services-icon{
+          background-image: url('../images/services-icon.svg');
+          background-size: 25px;
+      }
+      .icon.settings-icon{
+          background-image: url('../images/settings-icon.svg');
+          background-size: 24px;
+      }
+    }
+    &:after{
+      border: none;
+    }
+  }
 }

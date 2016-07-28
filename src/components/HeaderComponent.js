@@ -12,17 +12,18 @@ class HeaderComponent extends React.Component {
             <Headroom className="headroom--pinned">
                 <Navbar>
                     <Navbar.Header>
+                    <a href="javascript:void(0);" className="menu-icon"></a>
                       <Navbar.Brand>
-                            STATE STREET
+                            <img src="images/logo@2x.png" alt="StateStreet"/>
                       </Navbar.Brand>
                       <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
                       <Nav pullRight>
-                        <NavItem eventKey={1} href="#"><Glyphicon glyph="search" /></NavItem>
-                        <NavItem eventKey={2} href="#"><Glyphicon glyph="bell" /></NavItem>
-                        <NavItem eventKey={3} href="#">What&#39;s New</NavItem>
-                        <NavItem eventKey={3} href="#"><Glyphicon glyph="user" /></NavItem>
+                        <NavItem eventKey={1} href="#"><span className="icon header-search-icon"></span></NavItem>
+                        <NavItem eventKey={2} href="#"><span className="icon header-bell-icon"></span></NavItem>
+                        <NavItem eventKey={3} href="#"><span>What&#39;s New</span></NavItem>
+                        <NavItem eventKey={3} href="#"><span className="icon header-user-icon"></span></NavItem>
                       </Nav>
                     </Navbar.Collapse>
                   </Navbar>
