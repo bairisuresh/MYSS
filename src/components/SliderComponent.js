@@ -1,7 +1,6 @@
 import React from 'react';
 import TabsComponent from './TabsComponent'
 import AccordionComponent from './AccordionComponent'
-import DataGridComponent from './DataGridComponent'
 
 require('styles//Slider.scss');
 var SideBar = React.createClass({
@@ -11,7 +10,6 @@ var SideBar = React.createClass({
       <div className={sidebarClass}>
       	  <TabsComponent />
           <AccordionComponent />
-          <DataGridComponent/>
        </div>
     );
   }
