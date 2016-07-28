@@ -1,14 +1,73 @@
 .sidebar {
-  position: absolute;
-  top: 50px;
-  left: -1024px;
+  position: fixed;
+  top: 56px;
+  left: -100%;
   height: 100%;
   z-index: 2;
   width: 750px;
-  height: 1204px;
+  height: 100%;
+  height: -webkit-calc(100% - 56px);
+  height: calc(100% - 56px);
   transition: left .2s ease-in-out;
-  background-color: white;
-}
-.sidebar.open {
-    left: 80px;
+  max-width: 100%;
+  max-width: -webkit-calc(100% - 56px);
+  max-width: calc(100% - 56px);
+  background: url('../images/background-ship.svg') no-repeat center bottom #fff;
+  background-size: 100% auto;
+  &.open {
+    left: 56px;
+  }
+  .menu-heading-holder{
+    border-bottom: 2px solid #3490d0;
+    padding: 15px;
+    margin-bottom: 10px;
+    h3{
+        color: #0a2f5d;
+        font-size: 24px;
+        font-weight: normal;
+        display: inline-block;
+        margin: 0px 25px 0px 0px;
+    }
+    div{
+      display: inline-block;
+      float: right;
+    }
+    .icon{
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 6px;
+        &.plus-icon{
+          background-image: url('../images/add-icon.svg');
+          background-size: 24px;
+        }
+        &.settings-icon{
+          background-image: url('../images/list-settings-icon.svg');
+          background-size: 24px;
+        }
+        &.close-menu-icon{
+          background-image: url('../images/menu-back-arrows.svg');
+          background-size: 17px 20px;
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+    }
+    .menu-inner-search{
+      display: inline-block;
+      vertical-align: middle;
+      border-right: 1px solid #ccc;
+      padding-right: 20px;
+      margin-right: 20px;
+      input{
+          background: url('../images/search-field-icon.svg') no-repeat right 8px center #fff;
+          background-size: 13px 13px;
+          border: 1px solid #d1d1d1;
+          height: 26px;
+          padding: 0 30px 0 10px;
+      }
+    }
+  }
 }

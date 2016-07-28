@@ -16,7 +16,7 @@ class AccordionComponent extends React.Component {
              <Panel header="Custody" eventKey="2">
                  <InnerAccordionComponent />
              </Panel>
-             <Panel header="Investment Record Keeping" eventKey="3">
+             <Panel header="Investment RecordKeeping" eventKey="3">
                  <InnerAccordionComponent />
              </Panel>
             </Accordion>
