@@ -9,6 +9,7 @@ var SideBar = React.createClass({
   },
   recordValue: function(value) {
       this.props.gridData(value);
+      console.log("came", value)
   },
   render: function() {
     var sidebarClass = this.props.isOpen ? 'sidebar open' : 'sidebar';
@@ -26,7 +27,7 @@ var SideBar = React.createClass({
       		</div>
       	</section>
       	  <TabsComponent recordValue={this.recordValue}/>
-          <AccordionComponent />
+          <AccordionComponent recordValue={this.recordValue}/>
        </div>
     );
   }

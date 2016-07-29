@@ -6,18 +6,21 @@ import InnerAccordionComponent from './InnerAccordionComponent'
 require('styles//Accordion.scss');
 
 class AccordionComponent extends React.Component {
+    recordValue(value) {
+        this.props.recordValue(value);
+    }
   render() {
     return (
       <div className="accordion-component">
           <Accordion>
              <Panel header="Accounting" eventKey="1">
-                 <InnerAccordionComponent />
+                 <InnerAccordionComponent recordValue={this.recordValue.bind(this)}/>
              </Panel>
              <Panel header="Custody" eventKey="2">
-                 <InnerAccordionComponent />
+                 <InnerAccordionComponent recordValue={this.recordValue.bind(this)}/>
              </Panel>
              <Panel header="Investment RecordKeeping" eventKey="3">
-                 <InnerAccordionComponent />
+                 <InnerAccordionComponent recordValue={this.recordValue.bind(this)}/>
              </Panel>
             </Accordion>
       </div>
