@@ -23,6 +23,10 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
   	this.setState({sidebarOpen: false});
     currentcontent = <Body />
   },
+  gridData: function(data){
+      console.log(data)
+      this.setState({data: data});
+  },
     render() {
       var menuItems = {
         small: [
@@ -56,8 +60,8 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
           </ExpandableNavbar>
           <ExpandableNavToggleButton />
           <ExpandableNavPage fullStyle={navPageStyle.full} smallStyle={navPageStyle.small}>
-                <SideBar closeHandler={this.closeHandler} isOpen={this.state.sidebarOpen} />
-                {currentcontent}
+                <SideBar gridData={this.gridData} closeHandler={this.closeHandler} isOpen={this.state.sidebarOpen} />
+                <InterActiveComponents data={this.state.data}/>
           </ExpandableNavPage>
         </ExpandableNavContainer>
       );

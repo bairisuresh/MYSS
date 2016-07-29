@@ -27,7 +27,9 @@ var TabsComponent = React.createClass ({
          }
       };
     },
-
+    handleChange: function(value) {
+        this.props.recordValue(value);
+    },
     componentDidMount: function() {
       this.loadListData();
     },
@@ -35,7 +37,7 @@ var TabsComponent = React.createClass ({
         return (
             <TabPanel>
               <div className="tabs-component" tabTitle="Recent">
-                <ListComponent data={this.state.data}/>
+                <ListComponent handleChange={this.handleChange.bind(this)} data={this.state.data}/>
               </div>
               <div tabTitle="Favorites">
             //     Lorem ipsum Sunt nisi sint.

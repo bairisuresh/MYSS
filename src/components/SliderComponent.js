@@ -7,6 +7,9 @@ var SideBar = React.createClass({
   closeHandler: function(){
     this.props.closeHandler();
   },
+  recordValue: function(value) {
+      this.props.gridData(value);
+  },
   render: function() {
     var sidebarClass = this.props.isOpen ? 'sidebar open' : 'sidebar';
     return (
@@ -22,7 +25,7 @@ var SideBar = React.createClass({
       			<a href="javascript:void(0);" className="icon close-menu-icon" onClick={this.closeHandler}></a>
       		</div>
       	</section>
-      	  <TabsComponent />
+      	  <TabsComponent recordValue={this.recordValue}/>
           <AccordionComponent />
        </div>
     );

@@ -9,8 +9,7 @@ require('styles//List.scss');
 
 var  ListComponent = React.createClass ({
     handleChange: function(value) {
-    //   this.props.changeTitle(title);
-    alert(value);
+    this.props.handleChange(value);
     },
   render: function() {
     var that = this;

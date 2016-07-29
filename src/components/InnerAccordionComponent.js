@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ListData from '../Containers/ListData'
+import ListData from './ListData'
 require('styles//InnerAccordion.scss');
 
 var Section = React.createClass({
