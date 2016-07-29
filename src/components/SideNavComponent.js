@@ -13,6 +13,9 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
   getInitialState: function(){
     return {sidebarOpen: false};
   },
+  closeHandler: function(){
+    this.setState({sidebarOpen: false});
+  },
   handleViewSidebar: function(){
   	this.setState({sidebarOpen: !this.state.sidebarOpen});
   },
@@ -53,7 +56,7 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
           </ExpandableNavbar>
           <ExpandableNavToggleButton />
           <ExpandableNavPage fullStyle={navPageStyle.full} smallStyle={navPageStyle.small}>
-                <SideBar isOpen={this.state.sidebarOpen} />
+                <SideBar closeHandler={this.closeHandler} isOpen={this.state.sidebarOpen} />
                 {currentcontent}
           </ExpandableNavPage>
         </ExpandableNavContainer>

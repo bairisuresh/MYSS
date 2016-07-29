@@ -4,6 +4,9 @@ import AccordionComponent from './AccordionComponent'
 
 require('styles//Slider.scss');
 var SideBar = React.createClass({
+  closeHandler: function(){
+    this.props.closeHandler();
+  },
   render: function() {
     var sidebarClass = this.props.isOpen ? 'sidebar open' : 'sidebar';
     return (
@@ -16,7 +19,7 @@ var SideBar = React.createClass({
       				<input type="search" className="menu-inner-search" placeholder="Search here"/>
       			</article>
       			<a href="javascript:void(0);" className="icon settings-icon"></a>
-      			<a href="javascript:void(0);" className="icon close-menu-icon"></a>
+      			<a href="javascript:void(0);" className="icon close-menu-icon" onClick={this.closeHandler}></a>
       		</div>
       	</section>
       	  <TabsComponent />
