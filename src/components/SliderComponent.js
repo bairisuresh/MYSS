@@ -28,7 +28,7 @@ var SideBar = React.createClass({
       		<a href="javascript:void(0);" className="icon plus-icon"></a>
       		<div>
       			<article className="menu-inner-search">
-      				<input type="search" className="menu-inner-search" placeholder="Search here"/>
+      				<input type="search" className="menu-inner-search-field" placeholder="Search here"/>
       			</article>
       			<a href="javascript:void(0);" className="icon settings-icon"></a>
       			<a href="javascript:void(0);" className="icon close-menu-icon" onClick={this.closeHandler}></a>

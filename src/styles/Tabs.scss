@@ -1,17 +1,54 @@
 .tabs-component {
     width: 100%;
 }
-.react-tab-panel__tab-strip--theme-default.react-tab-panel__tab-strip--tab-position-top .react-tab-panel__tab-title--active{
-  border: none;
-  text-decoration: underline;
-  color: #41b3d3;
-  line-height: 1.5em;
+
+.react-tab-panel{
+  background: #fff;
+  .react-tab-panel__tab-strip{
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(131, 165, 187,.5);
+  }
+  .react-tab-panel__body{
+    padding: 5px 15px;
+    border: none;
+  }
+  .react-tab-panel__tab-strip-after{
+    border: none !important;
+  }
+  .react-tab-panel__tab-strip-between{
+    display: none !important;
+  }
+  .react-tab-panel__tab-title{
+    border: none !important;
+    margin: 0 !important;
+    color: #112f6d;
+    &:hover{
+       background: transparent !important;
+       border: none !important;
+    }
+    &.react-tab-panel__tab-title--active{
+      position: relative;
+      color: #41b3d3;
+      &:hover{
+        background: transparent !important;
+       border: none !important;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 10%;
+        width: 80%;
+        height:2px;
+        background: #41b3d3;
+      }
+    }
+    .react-tab-panel__tab-title-inner{
+      &:after,&:before{
+        content: none !important;
+      }
+    }
+  }
 }
-.react-tab-panel__tab-strip--theme-default.react-tab-panel__tab-strip--tab-position-top .react-tab-panel__tab-strip-after, .react-tab-panel__tab-strip--theme-default.react-tab-panel__tab-strip--tab-position-top .react-tab-panel__tab-title:not(.react-tab-panel__tab-title--active),.react-tab-panel__tab-strip--theme-default.react-tab-panel__tab-strip--tab-position-top .react-tab-panel__tab-title-inner--active:after, .react-tab-panel__tab-strip--theme-default.react-tab-panel__tab-strip--tab-position-bottom .react-tab-panel__tab-title-inner--active:after{
-  border: none;
-}
-.react-tab-panel--theme-default .react-tab-panel__body--tab-position-top{
-  border: none;
-  border-top: 1px solid #ddd;
-  margin-top: 15px;
-}
+

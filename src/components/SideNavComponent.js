@@ -62,7 +62,6 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
           <ExpandableNavToggleButton />
           <ExpandableNavPage fullStyle={navPageStyle.full} smallStyle={navPageStyle.small}>
                 <SideBar gridData={this.gridData} closeHandler={this.closeHandler} isOpen={this.state.sidebarOpen} />
-
                 {currentcontent}
           </ExpandableNavPage>
         </ExpandableNavContainer>
