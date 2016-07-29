@@ -1,6 +1,17 @@
-.list-component {
-    .list-group-item {
-        border: none;
-        border-bottom: solid 2px #83a5bb;
+.list-component{
+  .list-group-item{
+    padding: 6px 10px 6px 2px;
+    border: none;
+    border-bottom: solid 1px #83a5bb;
+    background: transparent;
+    &:last-child{
+      border-radius: 0;
+      border-width: 1px;
     }
+  }
+}
+.with-icon{
+  background: url('../images/pie-chart.svg') no-repeat 15px center;
+  background-size: 18px;
+  padding-left: 45px !important;
 }

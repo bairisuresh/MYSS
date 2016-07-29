@@ -1,3 +1,37 @@
-.motionmenu {
-  // border: 1px dashed #f00;
+.MotionMenu{
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+  i{
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    &.like-icon{
+      background-image: url('../images/like-icon.svg');
+    }
+    &.lock-icon{
+      background-image: url('../images/lock-icon.svg');
+    }
+    &.share-icon{
+      background-image: url('../images/share-icon.svg');
+    }
+    &.refresh-icon{
+      background-image: url('../images/refresh-icon.svg');
+    }
+    &.sheet-icon{
+      background-image: url('../images/sheet-icon.svg');
+    }
+    &.email-icon{
+      background-image: url('../images/email-icon.svg');
+    }
+    &.save-icon{
+      background-image: url('../images/save-icon.svg');
+    }
+    &.print-icon{
+      background-image: url('../images/print-icon.svg');
+    }
+  }
 }

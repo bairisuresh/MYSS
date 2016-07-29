@@ -1,15 +1,18 @@
 .accordion-component {
   // border: 1px dashed #f00;
+  margin-top: 15px;
+  padding: 0 15px;
   div.panel-heading {
       height: 45px;
       border-radius: 3px;
       background-color: #f7f7f7;
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 -2px 0 0 #3c86c0;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 -2px 0 0 #3c86c0
   }
   h4.panel-title {
       font-family: DINOffc;
       font-size: 18px;
       font-weight: normal;
       color: #112f6d;
+      line-height: 24px;
   }
 }

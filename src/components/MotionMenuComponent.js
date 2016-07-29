@@ -8,25 +8,24 @@ require('styles//MotionMenu.scss');
 class MotionMenuComponent extends React.Component {
   render() {
     return (
-              <div>
+              <div className="MotionMenu">
                 <Menu
                   direction="horizontal"
-                  distance={-40}
-                  width={30}
-                  height={30}
+                  distance={-28}
+                  width={24}
+                  height={24}
                   y={-5}
-                  x={150}
-                  customStyle={{
-                    color: "#fff",
-                    textAlign:"center",
-                    lineHeight:"50px",
-                    backgroundColor: "#16A085",
-                    border: "solid 1px #16A085",
-                    borderRadius: "50%"
-                  }}>
-                  <i className="bars"></i>
-                  <a href="http://google.com"><i className="home"></i></a>
-                  <a href="http://google.com"><i className="heart"></i></a>
+                  x={180}
+                  >
+                  <i className="bars"><img src="images/list-item-more-icon.svg" alt="" width="24"/></i>
+                  <a href="http://google.com"><i className="lock-icon"></i></a>
+                  <a href="http://google.com"><i className="share-icon"></i></a>
+                  <a href="http://google.com"><i className="refresh-icon"></i></a>
+                  <a href="http://google.com"><i className="sheet-icon"></i></a>
+                  <a href="http://google.com"><i className="email-icon"></i></a>
+                  <a href="http://google.com"><i className="save-icon"></i></a>
+                  <a href="http://google.com"><i className="like-icon"></i></a>
+                  <a href="http://google.com"><i className="print-icon"></i></a>
                 </Menu>
               </div>
     );

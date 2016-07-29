@@ -3,7 +3,7 @@
 
 import React from 'react'
 import DataGrid from '../config/griddle-react'
-//require('griddle-react/css/griddle.css')
+require('styles//DataGrid.scss');
 //import ReactDOM from 'react-dom';
 
 var someData =  [
@@ -229,7 +229,16 @@ class DataGridComponent extends React.Component {
   render() {
 		return(
     <div className="datagrid-component">
-
+    <div className="container-flued">
+		<section className="row">
+			<div className="col-md-8 page-title-holder">
+				<h2 className="page-title">Interactive Views</h2>
+			</div>
+			<div className="col-md-4 text-right">
+				<input type="search" className="menu-inner-search-field" placeholder="Search here"/>
+			</div>
+		</section>
+	</div>
     <DataGrid results={someData} showFilter={true} columnMetadata={customColumnMetadata} columns={["name", "city", "state","month", "country"]}/>
 
 

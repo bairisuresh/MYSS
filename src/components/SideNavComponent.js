@@ -61,7 +61,9 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
           <ExpandableNavToggleButton />
           <ExpandableNavPage fullStyle={navPageStyle.full} smallStyle={navPageStyle.small}>
                 <SideBar gridData={this.gridData} closeHandler={this.closeHandler} isOpen={this.state.sidebarOpen} />
+                <div className="main-content">
                 <InterActiveComponents data={this.state.data}/>
+                </div>
           </ExpandableNavPage>
         </ExpandableNavContainer>
       );

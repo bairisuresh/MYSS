@@ -21,8 +21,7 @@ var  ListComponent = React.createClass ({
               return (
                   <ListGroupItem key={list.id}>
                           <Row className="show-grid">
-                              <Col sm={1} md={1}><img src="images/pie-chart.svg" width="20"/></Col>
-                              <Col sm={4} md={4} onClick={()=> that.handleChange(list)}>{list.activityName}</Col>
+                              <Col sm={5} md={5} onClick={()=> that.handleChange(list)} className="with-icon">{list.activityName}</Col>
                               <Col sm={3} md={3}>{list.activityDate}</Col>
                               <Col sm={4} md={4}><MotionMenuComponent/></Col>
                           </Row>

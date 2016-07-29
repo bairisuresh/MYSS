@@ -13,18 +13,19 @@
   max-width: -webkit-calc(100% - 56px);
   max-width: calc(100% - 56px);
   background: url('../images/background-ship.svg') no-repeat center bottom #fff;
-  background-size: 100% auto;
+  background-size: 50% auto;
+  overflow: auto;
   &.open {
     left: 56px;
   }
   .menu-heading-holder{
-    border-bottom: 2px solid #3490d0;
-    padding: 15px;
+    border-bottom: 2px solid rgba(32,122,201,.5);
+    padding: 10px;
     margin-bottom: 10px;
     h3{
         color: #0a2f5d;
         font-size: 24px;
-        font-weight: normal;
+        font-weight: 300;
         display: inline-block;
         margin: 0px 25px 0px 0px;
     }
@@ -43,6 +44,8 @@
         &.plus-icon{
           background-image: url('../images/add-icon.svg');
           background-size: 24px;
+          position: relative;
+          bottom: 5px;
         }
         &.settings-icon{
           background-image: url('../images/list-settings-icon.svg');
@@ -61,13 +64,15 @@
       border-right: 1px solid #ccc;
       padding-right: 20px;
       margin-right: 20px;
-      input{
+      
+    }
+  }
+}
+.menu-inner-search-field{
           background: url('../images/search-field-icon.svg') no-repeat right 8px center #fff;
           background-size: 13px 13px;
           border: 1px solid #d1d1d1;
           height: 26px;
           padding: 0 30px 0 10px;
+          font-weight: lighter;
       }
-    }
-  }
-}
