@@ -6,13 +6,27 @@
 	border-radius: 3px;
 	background-color: #ffffff;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 -2px 0 0 #3c86c0;
-	.left-nav{
-		width: 70%;
-		height: 100%
+	.chart-nav-head{
+		height: 8.5%;
 	}
-	.right-nav{
-		width: 30%;
-		border-left: 1px #f4f4f4;
-		
-	}
+	.chart-nav-body{
+		height: 91%;
+		.left-nav{
+			width: 70%;
+			height: 100%;
+			float: left;
+		}
+		.right-nav{
+			width: 30%;
+			height:100%;
+			border-left: 1px #f4f4f4;
+			float: left;
+			.bar-component{
+				height : 50%;
+			}
+			.barpn-component{
+				height : 50%;
+			}
+		}	
+	}	
 }
