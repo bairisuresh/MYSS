@@ -7,37 +7,37 @@ import 'react-tab-panel/index.css'
 require('styles//Tabs.scss');
 
 var TabsComponent = React.createClass ({
-    loadListData: function() {
-      $.ajax({
-        url: './sources/griddata.json',
-        dataType: 'json',
-        success: function(data) {
-          this.setState({data: data});
-        }.bind(this),
-        error: function(xhr, status, err) {
-          console.error('#GET Error', status, err.toString());
-        }.bind(this)
-      });
-    },
+    // loadListData: function() {
+    //   $.ajax({
+    //     url: './sources/griddata.json',
+    //     dataType: 'json',
+    //     success: function(data) {
+    //       this.setState({data: data});
+    //     }.bind(this),
+    //     error: function(xhr, status, err) {
+    //       console.error('#GET Error', status, err.toString());
+    //     }.bind(this)
+    //   });
+    // },
 
-    getInitialState: function(){
-        return {
-         data: {
-            listdata: []
-         }
-      };
-    },
+    // getInitialState: function(){
+    //     return {
+    //      data: {
+    //         listdata: []
+    //      }
+    //   };
+    // },
     handleChange: function(value) {
         this.props.recordValue(value);
     },
-    componentDidMount: function() {
-      this.loadListData();
-    },
+    // componentDidMount: function() {
+    //   this.loadListData();
+    // },
      render() {
         return (
             <TabPanel>
               <div className="tabs-component" tabTitle="Recent">
-                <ListComponent handleChange={this.handleChange.bind(this)} data={this.state.data}/>
+                <ListComponent handleChange={this.handleChange.bind(this)} data={this.props.data}/>
               </div>
               <div tabTitle="Favorites">
             //     Lorem ipsum Sunt nisi sint.

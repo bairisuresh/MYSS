@@ -4,12 +4,19 @@ import AccordionComponent from './AccordionComponent'
 
 require('styles//Slider.scss');
 var SideBar = React.createClass({
+    getInitialState: function(){
+        return {
+         data: {
+            listdata: []
+         }
+      };
+    },
   closeHandler: function(){
     this.props.closeHandler();
   },
   recordValue: function(value) {
       this.props.gridData(value);
-      console.log("came", value)
+      this.state.data.listdata.push(value);
   },
   render: function() {
     var sidebarClass = this.props.isOpen ? 'sidebar open' : 'sidebar';
@@ -26,7 +33,7 @@ var SideBar = React.createClass({
       			<a href="javascript:void(0);" className="icon close-menu-icon" onClick={this.closeHandler}></a>
       		</div>
       	</section>
-      	  <TabsComponent recordValue={this.recordValue}/>
+      	  <TabsComponent recordValue={this.recordValue} data={this.state.data}/>
           <AccordionComponent recordValue={this.recordValue}/>
        </div>
     );
