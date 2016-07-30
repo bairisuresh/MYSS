@@ -1,297 +1,94 @@
 'use strict';
 
-
 import React from 'react'
 import DataGrid from '../config/griddle-react'
 require('styles//DataGrid.scss');
 //import ReactDOM from 'react-dom';
+import DropDownComponent from './DropDownComponent';
 
-var gridData = [
-              {
-                "id": "J638",
-                "name": "SAF - GLOBAL ALPHA (USD) FUND",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-07-25",
-                "month":"Jul"
+var gridData;
+var userData;
 
-              },
-              {
-                "id": "J617",
-                "name": "FUND CLOSED ON 06/28/2010",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-05-25",
-                "month":"May"
-              },
-              {
-                "id": "SW7Y",
-                "name": "CALPERS",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-01-25",
-                "month":"Jan"
-              },
-              {
-                "id": "CH0C",
-                "name": "RUSSELL US CORE EQUITY FUND",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-02-25",
-                "month":"Feb"
-              },
-              {
-                "id": "C7U5",
-                "name": "COL VAR PORT - SMALL CAP VALUE",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-03-25",
-                "month":"Mar"
-              },
-              {
-                "id": "SK80",
-                "name": "FUND CLOSED ON 04/04/2014",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-04-25",
-                "month":"Apr"
-              },
-              {
-                "id": "SJ38",
-                "name": "CALPERS",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-05-25",
-                "month":"May"
-              },
-              {
-                "id": "N4N1",
-                "name": "FUND CLOSED ON 10/7/2011",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-06-25",
-                "month":"Jun"
-              },
-              {
-                "id": "DD01",
-                "name": "DB-X TRACKERS MSCI WORLD",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-08-25",
-                "month":"Aug"
-              },
-              {
-                "id": "0AXC",
-                "name": "FUND CLOSED ON 24/06/2011",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-09-25",
-                "month":"Sep"
-              },
-              {
-                "id": "UAG5",
-                "name": "ADB/BLACKROCK FIN MGMT",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-10-25",
-                "month":"Oct"
-              },
-              {
-                "id": "SCWG",
-                "name": "BLACKROCK GLOBAL EQUITY",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-11-25",
-                "month":"Nov"
-              },
-              {
-                "id": "Q3VD",
-                "name": "FULLERTON(PRIVATE)LIMITED",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-12-25",
-                "month":"Dec"
-              },
-              {
-                "id": "Q2RL",
-                "name": "WSSP - CURRENCY HEDGED FUND",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-07-25",
-                "month":"Jul"
-              },
-              {
-                "id": "Q2DY",
-                "name": "IB RREEF GLB (EX-AUS) PROP SEC",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-06-25",
-                "month":"Jun"
-              },
-              {
-                "id": "FE6W",
-                "name": "THE ROLLS ROYCE PENSION FUND",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-07-25",
-                "month":"Jul"
-              },
-              {
-                "id": "ABNK",
-                "name": "FUND CLOSED ON 20/09/2011",
-                "_dual_prcng_bss_cd": "D",
-                "_nav_per_shr_amt": "104.0108",
-                "_priorday_to_input_dt_nav_prs": "103.9282",
-                "_nav_pershr_chg_amt": ".08",
-                "_perc_chg_nav_prs_by_day": ".08",
-                "_tot_nav_amt": "436854.46",
-                "_perc_total_net_assets": "1.50164741431197318511202856987167957023E-04",
-                "_tot_mkt_val_amt": "0",
-                "_shrs_unt_ots_qty": "4200.088",
-                "_crncy_cd_base": "EUR",
-                "_price_dt": "2016-07-25",
-                "month":"Jul"
-              }
-            ];
+var reqGridData;
+var reqUserData;
 
+var  DataGridComponent = React.createClass ({
+  getInitialState: function(){
+      return {
+       data: ""
+    };
+  },
+  loadListData: function() {
+    $.ajax({
+      url: './sources/griddata.json',
+      dataType: 'json',
+      success: function(data) {
+        gridData = data;
+        reqGridData = gridData.FundGroups.FundGroup;
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error('#GET Error', status, err.toString());
+      }.bind(this)
+    });
+    $.ajax({
+      url: './sources/userDetails.json',
+      dataType: 'json',
+      success: function(data) {
+        userData = data;
+        reqUserData = userData.DataResponse.Rows.Row;
+        console.log("aaaa",reqUserData);
 
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error('#GET Error', status, err.toString());
+      }.bind(this)
+    });
 
+  },
+  componentDidMount: function() {
+    this.loadListData();
+  },
+  handleChange: function(value){
 
-class DataGridComponent extends React.Component {
+  var reqData = $.grep(gridData.FundGroups.FundGroup, function(obj) {
+      return obj.id === value[0].id;
+  });
+
+  this.filterData(reqData);
+
+  },
+  filterData:function(reqData){
+var fundData = reqData[0].memberList.Funds.Fund;//this.state.reqGridData;
+var fundUsersData = [];
+var fundUserData;
+ if(fundData){
+   $(fundData).each(function(key,fundObj){
+    fundUserData =  $.grep(reqUserData,function(userObj){
+
+        return fundObj.id === userObj.fund_id;
+
+      })
+
+      $(fundUserData).each(function(k,obj){
+
+        fundUsersData.push(obj);
+
+      })
+
+   })
+
+   this.setState({ reqGridData: fundUsersData});
+
+ }
+
+  },
   render() {
 		return(
     <div className="datagrid-component">
+    <DropDownComponent handleChange={this.handleChange}/>
     <div className="container-flued">
-		<section className="row">
-			<div className="col-md-8 page-title-holder">
+		<section className="row page-title-holder">
+			<div className="col-md-8">
 				<h2 className="page-title">Interactive Views</h2>
 			</div>
 			<div className="col-md-4 text-right">
@@ -299,28 +96,15 @@ class DataGridComponent extends React.Component {
 			</div>
 		</section>
 	</div>
-    <DataGrid results={gridData} showFilter={true} columns={["id", "name","_dual_prcng_bss_cd","_nav_per_shr_amt","_priorday_to_input_dt_nav_prs","_nav_pershr_chg_amt","_perc_chg_nav_prs_by_day","_tot_nav_amt","_perc_total_net_assets","_tot_mkt_val_amt","_shrs_unt_ots_qty","_crncy_cd_base","_price_dt", "month"]}/>
+  <DataGrid results={this.state.reqGridData} showSettings={true}
+    sortAscendingComponent={<span className="fa fa-sort-alpha-asc"></span>}
+  sortDescendingComponent={<span className="fa fa-sort-alpha-desc"></span>}
+    showFilter={true} columns={["fund_id", "fund_name","dual_prcng_bss_cd","nav_per_shr_amt","priorday_to_input_dt_nav_prs","nav_pershr_chg_amt","perc_chg_nav_prs_by_day","tot_nav_amt","perc_total_net_assets","tot_mkt_val_amt","shrs_unt_ots_qty","crncy_cd_base","price_dt"]}/>
 		</div>
 	);
-
-	/*	return (
-      <div className="datagrid-component">
-          <DataGrid
-    			idProperty='id'
-    			dataSource='./sources/griddata.json'
-    			pagination={false}
-    			columns={columns}
-    			style={{height: 700}}
-    		/>
-      </div>
-    ); */
 	}
-}
+});
 
 DataGridComponent.displayName = 'DataGridComponent';
-
-// Uncomment properties you need
-// DataGridComponent.propTypes = {};
-// DataGridComponent.defaultProps = {};
 
 export default DataGridComponent;

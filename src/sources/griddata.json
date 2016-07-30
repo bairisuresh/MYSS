@@ -1,24 +1,171 @@
 {
-    "listdata": [
-        {
-            "id": "1",
-            "activityName": "3-12 Top Holding IV pm SLB1",
-            "activityDate": "12/02/16"
-        },
-        {
-            "id": "2",
-            "activityName": "Earned",
-            "activityDate": "09/07/16"
-        },
-        {
-            "id": "3",
-            "activityName": "Delories",
-            "activityDate": "05/07/16"
-        },
-        {
-            "id": "4",
-            "activityName": "Specturem",
-            "activityDate": "23/01/15"
+  "FundGroups": {
+    "FundGroup": [
+      {
+        "id": "6476",
+        "name": "Prod Fds for testing",
+        "type": "FG",
+        "publicFlag": "1",
+        "memberSize": "17",
+        "ownerId": "e305962",
+        "ownerName": "Mike (E ID) Borge",
+        "memberList": {
+          "Funds": {
+            "Fund": [
+              {
+                "id": "Q3VD",
+                "name": "FULLERTON(PRIVATE)LIMITED",
+                "month":"May"
+              },
+              {
+                "id": "Q2RL",
+                "name": "WSSP - CURRENCY HEDGED FUND",
+                "month":"Feb"
+              },
+              {
+                "id": "Q2DY",
+                "name": "IB RREEF GLB (EX-AUS) PROP SEC",
+                "month":"Jan"
+              },
+              {
+                "id": "FE6W",
+                "name": "THE ROLLS ROYCE PENSION FUND",
+                "month":"Mar"
+              }
+            ]
+          }
         }
+      },
+      {
+        "id": "6484",
+        "name": "KH FS",
+        "type": "FG",
+        "publicFlag": "1",
+        "memberSize": "2",
+        "ownerId": "e317388",
+        "ownerName": "Kevin Harrington",
+        "memberList": {
+          "Funds": {
+            "Fund": [
+              {
+                "id": "CH0C",
+                "name": "RUSSELL US CORE EQUITY FUND",
+                "month":"Jan"
+              },
+              {
+                "id": "C7U5",
+                "name": "COL VAR PORT - SMALL CAP VALUE",
+                "month":"Mar"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "6926",
+        "name": "Intergrated Fees(copy beta)",
+        "type": "FG",
+        "publicFlag": "1",
+        "memberSize": "2",
+        "ownerId": "e305962",
+        "ownerName": "Mike (E ID) Borge",
+        "memberList": {
+          "Funds": {
+            "Fund": [
+              {
+                "id": "07G6",
+                "name": "FUND CLOSED ON 12/17/2011",
+                "month":"Jan"
+              },
+              {
+                "id": "07G3",
+                "name": "CONVEXITY CAPITAL EAFE",
+                "month":"Apr"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "6953",
+        "name": "MB Copy made of KH FS Grp(2) - Mike",
+        "type": "FG",
+        "publicFlag": "1",
+        "memberSize": "3",
+        "ownerId": "e305962",
+        "ownerName": "Mike (E ID) Borge",
+        "memberList": {
+          "Funds": {
+            "Fund": [
+              {
+                "id": "CH0C",
+                "name": "RUSSELL US CORE EQUITY FUND",
+                "month":"Mar"
+              },
+              {
+                "id": "C7U5",
+                "name": "COL VAR PORT - SMALL CAP VALUE",
+                "month":"Feb"
+              },
+              {
+                "id": "1WZ3",
+                "name": "LTM2 HO LSV GLOBAL EQUITY",
+                "month":"Jan"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "7187",
+        "name": "sggroup",
+        "type": "FG",
+        "publicFlag": "1",
+        "memberSize": "2",
+        "ownerId": "p472749",
+        "ownerName": "Sudhakar thirakala",
+        "memberList": {
+          "Funds": {
+            "Fund": [
+              {
+                "id": "00A2",
+                "name": "CONRAD N HILTON FOUNDATION"
+              },
+              {
+                "id": "00A5",
+                "name": "FUND CLOSED ON 22/11/2012"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "7300",
+        "name": "Statement of Condition Fund Group_DBK6 KRS1 KRS2",
+        "type": "FG",
+        "publicFlag": "1",
+        "memberSize": "3",
+        "ownerId": "e372981",
+        "ownerName": "Terry Tse",
+        "memberList": {
+          "Funds": {
+            "Fund": [
+              {
+                "id": "KRS1",
+                "name": "SKROY TEST FUND DONT USE"
+              },
+              {
+                "id": "KRS2",
+                "name": "SKROY TEST FUND DONT USE"
+              },
+              {
+                "id": "DBK6",
+                "name": "BERNSTEIN EMERGING MKTS PORT"
+              }
+            ]
+          }
+        }
+      }
     ]
+  }
 }

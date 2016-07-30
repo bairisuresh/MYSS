@@ -7,7 +7,7 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
     ExpandableNavToggleButton } from 'react-expandable-nav';
 
   require('styles//SideNav.scss');
-  var currentcontent = <Body />
+  var currentcontent = <InterActiveComponents />;
   var SideNavComponent = React.createClass({
 
   getInitialState: function(){
@@ -21,7 +21,7 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
   },
   handleHomeView: function(){
   	this.setState({sidebarOpen: false});
-    currentcontent = <Body />
+    currentcontent = <InterActiveComponents />;
   },
   gridData: function(data){
       this.setState({sidebarOpen: false});
@@ -62,7 +62,10 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
           <ExpandableNavToggleButton />
           <ExpandableNavPage fullStyle={navPageStyle.full} smallStyle={navPageStyle.small}>
                 <SideBar gridData={this.gridData} closeHandler={this.closeHandler} isOpen={this.state.sidebarOpen} />
+                <div className="main-content">
                 {currentcontent}
+                </div>
+
           </ExpandableNavPage>
         </ExpandableNavContainer>
       );
