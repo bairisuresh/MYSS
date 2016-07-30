@@ -7,7 +7,7 @@ require('styles//ImageBg.scss');
 class ImageBgComponent extends React.Component {
   render() {
   	var imagebg ={
-      backgroundImage: 'url("images/'+this.props.image + '")'
+      backgroundImage: 'url("../images/'+this.props.image + '")'
   	};
     return (
       <div style={imagebg} className="imagebg-component">
