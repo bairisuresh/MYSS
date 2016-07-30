@@ -1,259 +1,101 @@
 'use strict';
 
-
 import React from 'react'
 import DataGrid from '../config/griddle-react'
-//require('griddle-react/css/griddle.css')
-//import ReactDOM from 'react-dom';
+import DropDownComponent from './DropDownComponent';
 
-var someData =  [
-{
-  "id": 0,
-  "name": "Nagendra",
-  "city": "Hyderabad",
-  "state": "Telengana",
-  "month":"Jan",
-  "country": "United Kingdom",
-  "company": "Ovolo",
-  "favoriteNumber": 7
+var gridData;
+var userData;
+
+var reqGridData;
+var reqUserData;
+
+var  DataGridComponent = React.createClass ({
+  getInitialState: function(){
+      return {
+       data: ""
+    };
   },
-  {
-    "id": 1,
-    "name": "Koch Becker",
-    "city": "Nagendra",
-    "state": "New Jersey",
-    "month":"Apr",
-    "country": "Madagascar",
-    "company": "Eventage",
-    "favoriteNumber": 2
+  loadListData: function() {
+    $.ajax({
+      url: './sources/griddata.json',
+      dataType: 'json',
+      success: function(data) {
+        gridData = data;
+        reqGridData = gridData.FundGroups.FundGroup;
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error('#GET Error', status, err.toString());
+      }.bind(this)
+    });
+    $.ajax({
+      url: './sources/userDetails.json',
+      dataType: 'json',
+      success: function(data) {
+        userData = data;
+        reqUserData = userData.DataResponse.Rows.Row;
+        console.log("aaaa",reqUserData);
+
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error('#GET Error', status, err.toString());
+      }.bind(this)
+    });
+
   },
-  {
-    "id": 0,
-    "name": "Nagendra",
-    "city": "Hyderabad",
-    "state": "Telengana",
-    "month":"Feb",
-    "country": "United Kingdom",
-    "company": "Ovolo",
-    "favoriteNumber": 7
-    },
-    {
-      "id": 0,
-      "name": "Nagendra",
-      "city": "Hyderabad",
-      "state": "Telengana",
-      "month":"Mar",
-      "country": "United Kingdom",
-      "company": "Ovolo",
-      "favoriteNumber": 7
-      },
-      {
-        "id": 0,
-        "name": "Nagendra",
-        "city": "Hyderabad",
-        "state": "Telengana",
-        "month":"May",
-        "country": "United Kingdom",
-        "company": "Ovolo",
-        "favoriteNumber": 7
-        },
-        {
-          "id": 0,
-          "name": "Nagendra",
-          "city": "Hyderabad",
-          "state": "Telengana",
-          "month":"Jun",
-          "country": "United Kingdom",
-          "company": "Ovolo",
-          "favoriteNumber": 7
-          },
-          {
-            "id": 0,
-            "name": "Nagendra",
-            "city": "Hyderabad",
-            "state": "Telengana",
-            "month":"Jul",
-            "country": "United Kingdom",
-            "company": "Ovolo",
-            "favoriteNumber": 7
-            },
-            {
-              "id": 0,
-              "name": "Nagendra",
-              "city": "Hyderabad",
-              "state": "Telengana",
-              "month":"Aug",
-              "country": "United Kingdom",
-              "company": "Ovolo",
-              "favoriteNumber": 7
-              },
-              {
-                "id": 0,
-                "name": "Nagendra",
-                "city": "Hyderabad",
-                "state": "Telengana",
-                "month":"Sep",
-                "country": "United Kingdom",
-                "company": "Ovolo",
-                "favoriteNumber": 7
-                },
-                {
-                  "id": 0,
-                  "name": "Nagendra",
-                  "city": "Hyderabad",
-                  "state": "Telengana",
-                  "month":"Oct",
-                  "country": "United Kingdom",
-                  "company": "Ovolo",
-                  "favoriteNumber": 7
-                },
-                {
-                  "id": 0,
-                  "name": "Nagendra",
-                  "city": "Hyderabad",
-                  "state": "Telengana",
-                  "month":"Nov",
-                  "country": "United Kingdom",
-                  "company": "Ovolo",
-                  "favoriteNumber": 7
-                  },
-                  {
-                    "id": 0,
-                    "name": "Nagendra",
-                    "city": "Hyderabad",
-                    "state": "Telengana",
-                    "month":"Dec",
-                    "country": "United Kingdom",
-                    "company": "Ovolo",
-                    "favoriteNumber": 7
-                    }
-
-];
-
-
-/*
-var data    = []
-var columns = [
-	{ name: 'index', title: '#', width: 150 },
-	{ name: 'firstName'},
-	{ name: 'lastName' },
-	{ name: 'city', width: 200 },
-	{ name: 'country', width: 200 },
-	{ name: 'email'}
-]
-*/
-
-
-var LinkComponent = React.createClass({
-  render: function(){
-  var url ="#speakers/" + this.props.rowData.state + "/" + this.props.data;
-    return <a href={url}>{this.props.data}</a>
-  }
-});
-
-var HeaderComponent = React.createClass({
-  textOnClick: function(e) {
-    e.stopPropagation();
+  componentDidMount: function() {
+    this.loadListData();
   },
+  handleChange: function(value){
 
-  filterText: function(e) {
-console.log("sss",this);
+  var reqData = $.grep(gridData.FundGroups.FundGroup, function(obj) {
+      return obj.id === value[0].id;
+  });
 
-    this.props.filterByColumn(e.target.name, this.props.columnName);
-    //e.stopPropagation();
+  this.filterData(reqData);
+
   },
+  filterData:function(reqData){
+var fundData = reqData[0].memberList.Funds.Fund;//this.state.reqGridData;
+var fundUsersData = [];
+var fundUserData;
+ if(fundData){
+   $(fundData).each(function(key,fundObj){
+    fundUserData =  $.grep(reqUserData,function(userObj){
 
-  render: function(){
-    return (
-      <span>
-      <button type='button' name="Kapowsin" onClick={this.filterText}>Kapowsin</button>
-      </span>
-    );
-  }
-});
+        return fundObj.id === userObj.fund_id;
 
-var customColumnMetadata = [
-{
-  "columnName": "id",
-  "order": 1,
-  "locked": false,
-  "visible": true
-},
-{
-  "columnName": "name",
-  "order": 2,
-  "locked": false,
-  "visible": true,
-  "customComponent": LinkComponent
-},
-{
-  "columnName": "city",
-  "order": 3,
-  "locked": false,
-  "visible": true,
-  "customHeaderComponent": HeaderComponent,
-  "customHeaderComponentProps": { color: 'red' }
-},
-{
-  "columnName": "state",
-  "order": 4,
-  "locked": false,
-  "visible": true,
-  "customHeaderComponent": HeaderComponent,
-  "customHeaderComponentProps": { color: 'blue' }
-},
-{
-  "columnName": "country",
-  "order": 5,
-  "locked": false,
-  "visible": true
-},
-{
-  "columnName": "company",
-  "order": 6,
-  "locked": false,
-  "visible": true
-},
-{
-  "columnName": "favoriteNumber",
-  "order":  7,
-  "locked": false,
-  "visible": true
-}
-];
+      })
 
+      $(fundUserData).each(function(k,obj){
 
+        fundUsersData.push(obj);
 
+      })
 
-class DataGridComponent extends React.Component {
+   })
+
+   this.setState({ reqGridData: fundUsersData});
+
+ }
+
+  },
   render() {
-		return(
+  	return(
+
     <div className="datagrid-component">
+    <DropDownComponent handleChange={this.handleChange}/>
 
-    <DataGrid results={someData} showFilter={true} columnMetadata={customColumnMetadata} columns={["name", "city", "state","month", "country"]}/>
-
+    <DataGrid results={this.state.reqGridData} showSettings={true}
+    sortAscendingComponent={<span className="fa fa-sort-alpha-asc"></span>}
+  sortDescendingComponent={<span className="fa fa-sort-alpha-desc"></span>}
+    showFilter={true} columns={["fund_id", "fund_name","dual_prcng_bss_cd","nav_per_shr_amt","priorday_to_input_dt_nav_prs","nav_pershr_chg_amt","perc_chg_nav_prs_by_day","tot_nav_amt","perc_total_net_assets","tot_mkt_val_amt","shrs_unt_ots_qty","crncy_cd_base","price_dt"]}/>
 
 		</div>
 	);
-
-	/*	return (
-      <div className="datagrid-component">
-          <DataGrid
-    			idProperty='id'
-    			dataSource='./sources/griddata.json'
-    			pagination={false}
-    			columns={columns}
-    			style={{height: 700}}
-    		/>
-      </div>
-    ); */
 	}
-}
+});
 
 DataGridComponent.displayName = 'DataGridComponent';
-
-// Uncomment properties you need
-// DataGridComponent.propTypes = {};
-// DataGridComponent.defaultProps = {};
 
 export default DataGridComponent;

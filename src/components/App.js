@@ -6,7 +6,7 @@ require('styles//App.scss');
 const App = () => (
   <div id="myssApp" className="app-component">
     <Header />
-    <SideNavComponent />    
+    <SideNavComponent />
   </div>
 )
 
