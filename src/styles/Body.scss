@@ -4,9 +4,16 @@ body{
 .body-component {
 	height : 100%;
 	width:100%;
+	overflow-y: scroll;
 	background-color:#efeeee;
 	.body-first-row{
 		height : 60%;
+	}
+	.body-second-row{
+		height : 60%;	
+	}
+	.body-third-row{
+		height : 60%;	
 	}
 }
 
