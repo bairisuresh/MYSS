@@ -1,5 +1,56 @@
 .datagrid-component {
-
+  .griddle{
+    .top-section{
+      margin-bottom: 15px;
+      & > div{
+        display: inline-block;
+        float: none !important;
+        width: auto !important;
+        vertical-align: middle;
+      }
+      .filter-container{
+        margin-right: 15px;
+        .form-control{
+          display: inline-block;
+          width: auto;  
+          margin-right: 15px;
+        }
+        input{
+          height: 29px;
+          font-size: 12px;
+          &[type="button"]{
+            background: #fff;
+            border: 1px solid #dadada;
+            width: 50px;
+            text-transform: uppercase;
+          }
+        }
+        
+      }
+    }
+    .settings{
+      display: inline-block;
+      border: 1px solid #ccc !important;
+      padding: 3px 15px !important;
+      background: #fff !important;
+    }
+    .griddle-body{
+      th,td{
+        wite-space: nowrap;
+        text-overflow: ellipsisl;
+      }
+      th{
+        height: 40px;
+        background: #fff !important;
+        padding: 0;
+        vertical-align: middle;
+      }
+      td{
+        background: transparent !important; 
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
 .main-content{
@@ -13,4 +64,8 @@
       font-weight: normal;
     }
   }
+}
+.form-control{
+  border-radius: 0 !important;
+  height: 29px !important;
 }
