@@ -230,8 +230,8 @@ class DataGridComponent extends React.Component {
 		return(
     <div className="datagrid-component">
     <div className="container-flued">
-		<section className="row">
-			<div className="col-md-8 page-title-holder">
+		<section className="row page-title-holder">
+			<div className="col-md-8">
 				<h2 className="page-title">Interactive Views</h2>
 			</div>
 			<div className="col-md-4 text-right">
