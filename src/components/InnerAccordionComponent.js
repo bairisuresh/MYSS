@@ -40,17 +40,20 @@ var Section = React.createClass({
 });
 
 var InnerAccordionComponent = React.createClass({
+    handleChange: function(value) {
+        this.props.recordValue(value);
+    },
   render: function() {
     return (
       <div className="main">
         <Section title="Income">
-            <ListData title={"income"}/>
+            <ListData handleChange={this.handleChange.bind(this)} title={"income"}/>
         </Section>
         <Section title="Positions">
-            <ListData title={"positions"}/>
+            <ListData handleChange={this.handleChange.bind(this)} title={"positions"}/>
         </Section>
         <Section title="Trades">
-            <ListData title={"trades"}/>
+            <ListData handleChange={this.handleChange.bind(this)} title={"trades"}/>
         </Section>
       </div>
     );

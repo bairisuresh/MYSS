@@ -7,7 +7,7 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
     ExpandableNavToggleButton } from 'react-expandable-nav';
 
   require('styles//SideNav.scss');
-  var currentcontent = <InterActiveComponents />
+  var currentcontent = <InterActiveComponents />;
   var SideNavComponent = React.createClass({
 
   getInitialState: function(){
@@ -21,11 +21,12 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
   },
   handleHomeView: function(){
   	this.setState({sidebarOpen: false});
-    currentcontent = <Body />
+    currentcontent = <InterActiveComponents />;
   },
   gridData: function(data){
-      console.log(data)
+      this.setState({sidebarOpen: false});
       this.setState({data: data});
+      currentcontent = <InterActiveComponents data={this.state.data}/>
   },
     render() {
       var menuItems = {

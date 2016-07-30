@@ -24,8 +24,7 @@ var  ListData = React.createClass ({
       };
     },
     handleChange: function(value) {
-        alert(value)
-        console.log(value)
+        this.props.handleChange(value);
     },
     componentDidMount: function() {
       this.loadListData();
