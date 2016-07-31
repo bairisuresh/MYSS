@@ -69,28 +69,28 @@ class MailBoxComponent extends React.Component {
     //console.log("state is: "+JSON.stringify(this.getState()));
       return (
         <div className="mailbox-component">
-  		<div className="mailbox-header">
-  			<div>Inbox</div>
-  			<hr/>
-  		</div>
-  		<div className="mailbox-body container-fluid">
-  		{
-  			this.state.content.map(function(data){
-  				return(
-            <div className="mailbox-img-component row">
-      			<div className="col-md-2"><Image image={data.image1}/></div>
-      		  	<div className="col-md-8">
-      		  		{data.type}
-      		  	</div>
-      		  	<div className="col-md-2">
-      		  		<Image image={data.image2}/>
-      		  	</div>
-            </div>
-          )
-  			})
+          <div className="mailbox-header">
+          	<div>Inbox</div>
+          	<hr/>
+          </div>
+          <div className="mailbox-body container-fluid">
+          {
+          	this.state.content.map(function(data){
+          		return(
+                <div className="mailbox-img-component row">
+          			<div className="col-md-2"><Image image={data.image1}/></div>
+          		  	<div className="col-md-8">
+          		  		{data.type}
+          		  	</div>
+          		  	<div className="col-md-2">
+          		  		<Image image={data.image2}/>
+          		  	</div>
+                </div>
+              )
+          	})
 
-  		}
-  		</div>
+          }
+          </div>
         </div>
       );
     }
