@@ -9,15 +9,15 @@ class BarPnComponent extends React.Component {
   	var ReactD3 = require('react-d3-components')
   	var BarChart = ReactD3.BarChart;
   	var data = [{
-	    label: 'somethingA',
-	    values: [{x: 'SomethingA', y: -10}, {x: 'SomethingB', y: 4}, {x: 'SomethingC', y: 3}]
+	    label: 'Bottom 5 performers',
+	    values: [{x: 'Wed', y: -2}, {x: 'Thur', y: -4}, {x: 'Fri', y: 30}]
 	}];
 
     return (
       <div className="barpn-component">
          <BarChart
         data={data}
-        width={395}
+        width={250}
         height={200}
         margin={{top: 10, bottom: 50, left: 50, right: 10}}/>
       </div>

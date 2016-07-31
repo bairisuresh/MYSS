@@ -52,8 +52,8 @@ import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
           <ExpandableNavbar className="sidebarMenu">
             <ExpandableNavMenu>
               <ExpandableNavMenuItem small={menuItems.small[0]} full={menuItems.full[0]} onClick={this.handleHomeView}/>
-              <ExpandableNavMenuItem small={menuItems.small[1]} full={menuItems.full[1]} onClick={this.handleViewSidebar}/>
-              <ExpandableNavMenuItem small={menuItems.small[2]} full={menuItems.full[0]} />
+              <ExpandableNavMenuItem small={menuItems.small[1]} full={menuItems.full[1]} />
+              <ExpandableNavMenuItem small={menuItems.small[2]} full={menuItems.full[0]} onClick={this.handleViewSidebar}/>
               <ExpandableNavMenuItem small={menuItems.small[3]} full={menuItems.full[1]} />
               <ExpandableNavMenuItem small={menuItems.small[4]} full={menuItems.full[0]} />
               <ExpandableNavMenuItem small={menuItems.small[5]} full={menuItems.full[1]} />
