@@ -8,4 +8,50 @@
 	border-radius: 3px;
 	background-color: #ffffff;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 -2px 0 0 #3c86c0;
+
+	.mailbox-header{
+		width:100%;
+		height:8%;
+		div{
+			height:99%;
+			width:100%;
+			font-family: Arial;
+		  	font-size: 16px;
+		  	font-weight: 400;
+		  	color: #112f6d;
+		  	padding:1.8%;
+		}
+		hr{
+			width: 100%;
+	  		border: 0;
+	    	border-top: 1px solid #e4e4e4;
+	  		margin:0%;
+		}
+	}
+	.mailbox-body{
+		height: 90%;
+		overflow: hidden;
+		overflow-y: scroll;
+
+		.mailbox-img-component {
+			margin: 1%;
+			border-bottom: solid 1px #efeeee;
+			margin-left: -15px;
+			margin-right: -15px;
+			
+			div:nth-child(2){
+				font-family: Arial;
+				font-size: 14px;
+				font-weight: 400;
+				color: #727272;
+			}
+			div:nth-child(3){
+				font-family: Arial;
+				font-size: 14px;
+				font-weight: 400;
+				color: #727272;
+
+			}
+		}
+	}
 }
