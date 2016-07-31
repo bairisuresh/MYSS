@@ -16,9 +16,14 @@
   .search input{
     border-radius: 2px;
     background-color: #ffffff;
-    border: solid 0.5px #d1d1d1;
     padding-top:1.5%;
-    padding-right:1.5%; 
+    padding-right:1.5%;
+    background: url('../images/search-field-icon.svg') no-repeat right 8px center #fff;
+    background-size: 13px 13px;
+    border: 1px solid #d1d1d1;
+    height: 26px;
+    font-weight: lighter;
   }
+
 }
 
