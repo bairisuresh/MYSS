@@ -8,7 +8,7 @@ class TypesFsComponent extends React.Component {
   render() {
     return (
       <div className="typesfs-component">
-        Please edit src/components///TypesFsComponent.js to update this component!
+        <img src="/images/home-accordion.png" width="100%" height="100%"/>
       </div>
     );
   }

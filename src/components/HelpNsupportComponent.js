@@ -8,7 +8,7 @@ class HelpNsupportComponent extends React.Component {
   render() {
     return (
       <div className="helpnsupport-component">
-        Please edit src/components///HelpNsupportComponent.js to update this component!
+        <img src="/images/home-help-support.png" width="100%" height="100%"/>
       </div>
     );
   }

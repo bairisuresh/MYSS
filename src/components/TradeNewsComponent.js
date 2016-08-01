@@ -8,7 +8,7 @@ class TradeNewsComponent extends React.Component {
   render() {
     return (
       <div className="tradenews-component">
-        Please edit src/components///TradeNewsComponent.js to update this component!
+        <img src="/images/home-resources.png" width="100%" height="100%"/>
       </div>
     );
   }
