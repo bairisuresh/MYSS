@@ -13,7 +13,12 @@
 		height: 96%;
 		width: 100%;
 		overflow-y: scroll;
-
+		.react-tab-panel__tab-strip {
+			height: 8%;
+		    padding-bottom: 0px;
+		    margin-bottom: 0px;
+		    border-bottom: 1px solid #e4e4e4;
+		}
 	.tradenews-body{
 		height: 90%;
 		width: 100%;
@@ -21,7 +26,6 @@
 		width: auto;
 
 		.tradenews-img-component {
-			margin: 1%;
 			border-bottom: solid 1px #efeeee;
 
 			div:nth-child(2){
@@ -41,6 +45,7 @@
 	}
 }
 }
-.tradenews-body>div{
+.react-tab-panel__body>div{
 	width: 100%;
+	height: 100%;
 }
