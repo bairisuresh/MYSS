@@ -7,4 +7,39 @@
 	border-radius: 3px;
 	background-color: #ffffff;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 -2px 0 0 #3c86c0;
+
+
+	.pannel {
+		height: 96%;
+		width: 100%;
+		overflow-y: scroll;
+
+	.tradenews-body{
+		height: 90%;
+		width: 100%;
+		overflow: hidden;
+		width: auto;
+
+		.tradenews-img-component {
+			margin: 1%;
+			border-bottom: solid 1px #efeeee;
+			margin-left: -15px;
+			margin-right: -15px;
+
+			div:nth-child(2){
+				font-family: Arial;
+				font-size: 14px;
+				font-weight: 400;
+				color: #727272;
+			}
+			div:nth-child(3){
+				font-family: Arial;
+				font-size: 14px;
+				font-weight: 400;
+				color: #727272;
+
+			}
+		}
+	}
+}
 }
