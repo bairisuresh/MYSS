@@ -1,4 +1,81 @@
 .datagrid-component {
+  .grid-boxes-holder{
+    background: #fff;
+    height: 35px;
+    line-height: 36px;
+    padding: 0 15px;
+    .select-box-list{
+      margin: 0;
+      li{
+        position: relative;
+        margin: 0 30px 0 0;
+        padding: 0 10px 0 0;
+        &:after{
+          content: '';
+          display: block;
+          width: 15px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: -10px;
+          background: url('../images/select-list-arrow.png') no-repeat center;
+          background-size:  100%;
+        }
+        &:last-child{
+           margin-right: 0;
+          &:after{
+            content: none;
+          }
+        }
+      }
+      select{
+        background: transparent;
+        border: none;
+        height: 36px;
+        color: #112f6d;
+        background: url('../images/select-list-caret.png') no-repeat right 18px;
+        padding-right: 15px;
+        max-width: 210px;
+      }
+    }
+    .modified-date{
+      font-size: 12px;
+      color: #9f9f9f;
+    }
+    .icons-list{
+      margin: 0;
+      line-height: normal;
+      padding: 6px 0;
+      li{
+        .icon{
+          display: block;
+          height: 24px;
+          width: 24px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 24px;
+          &.save-icon{
+            background-image: url('../images/blue-save-icon.svg');
+          }
+          &.setting-icon{
+            background-image: url('../images/blue-settings-icon.svg');
+          }
+          &.refresh-icon{
+            background-image: url('../images/blue-refresh-icon.svg');
+          }
+          &.print-icon{
+            background-image: url('../images/blue-print-icon.svg');
+          }
+          &.dup-icon{
+            background-image: url('../images/blue-dup-icon.svg');
+          }
+          &.download-icon{
+            background-image: url('../images/blue-download-icon.svg');
+          }
+        }
+      }
+    }
+  }
   .griddle{
     .top-section{
       margin-bottom: 15px;
@@ -38,6 +115,7 @@
       th,td{
         wite-space: nowrap;
         text-overflow: ellipsisl;
+        word-break: break-all;
       }
       th{
         height: 40px;
