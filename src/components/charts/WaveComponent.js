@@ -20,6 +20,9 @@ class WaveComponent extends React.Component {
     ]};
     this.firstGraph = this.firstGraph.bind(this);
     this.secondGraph = this.secondGraph.bind(this);
+    this.thirdGraph = this.thirdGraph.bind(this);
+    this.fourthGraph = this.fourthGraph.bind(this);
+    
   }
   updateDimensions(callback) {
       callback({width: Math.round($(".wave-component").width()), height: Math.round($(".wave-component").height())});
@@ -63,18 +66,7 @@ class WaveComponent extends React.Component {
         
       },1000)*/
   }
-  secondGraph(){
-    this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
-      {
-        label: 'somethingA',
-        values: [{x: 0, y: 2}, {x: 1.3, y: 8}, {x: 3, y: 5}, {x: 3.5, y: 7}]
-      },
-      {
-        label: 'somethingB',
-        values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8}]
-      }
-    ]});
-  }
+
   firstGraph(){
     this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
       {
@@ -87,6 +79,46 @@ class WaveComponent extends React.Component {
       }
     ]}) 
   }
+
+  secondGraph(){
+    this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
+      {
+        label: 'somethingA',
+        values: [{x: 0, y: 2}, {x: 1.3, y: 8}, {x: 3, y: 5}, {x: 3.5, y: 7}]
+      },
+      {
+        label: 'somethingB',
+        values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8}]
+      }
+    ]});
+  }
+
+  thirdGraph(){
+    this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
+      {
+        label: 'somethingA',
+        values: [{x: 0, y: 2}, {x: 1.3, y: 8}, {x: 3, y: 5}, {x: 3.5, y: 7},{x: 4, y: 7}]
+      },
+      {
+        label: 'somethingB',
+        values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8},{x: 3.5, y: 7},]
+      }
+    ]});
+  }
+
+  fourthGraph(){
+    this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
+      {
+        label: 'somethingA',
+        values: [{x: 0, y: 2}, {x: 1.3, y: 8}, {x: 3, y: 5}, {x: 3.5, y: 7},{x: 4, y: 9}]
+      },
+      {
+        label: 'somethingB',
+        values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8},{x: 4, y: 9}]
+      }
+    ]});
+  }
+
   render() {
 
   	var ReactD3 = require('react-d3-components')
@@ -105,8 +137,10 @@ class WaveComponent extends React.Component {
         }
         </div>
       <div className="wave-component-gb">
-        <button type="button" className="btn btn-primary" onClick={this.firstGraph}>Graph One</button>
-        <button type="button" className="btn btn-primary" onClick={this.secondGraph}>Graph Two</button>
+        <button type="button" className="btn btn-primary" onClick={this.firstGraph}>Banking</button>
+        <button type="button" className="btn btn-primary" onClick={this.secondGraph}>Retail</button>
+        <button type="button" className="btn btn-primary" onClick={this.thirdGraph}>Insurance</button>
+        <button type="button" className="btn btn-primary" onClick={this.fourthGraph}>Mid Cap</button>
       </div>
       </div>
     );
