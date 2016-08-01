@@ -7,7 +7,7 @@ require('styles/charts/Wave.scss');
 
 class WaveComponent extends React.Component {
   constructor(props,context){
-    super(props,context); 
+    super(props,context);
     this.state={alignment : {width: this.props.containerWidth-60, height: this.props.containerHeight-60},waveValues:[
       {
         label: 'somethingA',
@@ -22,7 +22,7 @@ class WaveComponent extends React.Component {
     this.secondGraph = this.secondGraph.bind(this);
     this.thirdGraph = this.thirdGraph.bind(this);
     this.fourthGraph = this.fourthGraph.bind(this);
-    
+
   }
   updateDimensions(callback) {
       callback({width: Math.round($(".wave-component").width()), height: Math.round($(".wave-component").height())});
@@ -49,7 +49,7 @@ class WaveComponent extends React.Component {
               label: 'somethingB',
               values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8}]
             }
-          ]})            
+          ]})
         }else{
           console.log("setInterval callback even");
           that.setState({alignment : {width: Math.round($(".wave-component").width()), height: Math.round($(".wave-component").height())},waveValues:[
@@ -61,9 +61,9 @@ class WaveComponent extends React.Component {
               label: 'somethingB',
               values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 0}]
             }
-          ]})  
+          ]})
         }
-        
+
       },1000)*/
   }
 
@@ -77,7 +77,7 @@ class WaveComponent extends React.Component {
         label: 'somethingB',
         values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 0}]
       }
-    ]}) 
+    ]})
   }
 
   secondGraph(){
@@ -97,11 +97,11 @@ class WaveComponent extends React.Component {
     this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
       {
         label: 'somethingA',
-        values: [{x: 0, y: 2}, {x: 1.3, y: 8}, {x: 3, y: 5}, {x: 3.5, y: 7},{x: 4, y: 7}]
+        values: [{x: 1, y: 2}, {x: 1.5, y: 5}, {x: 3, y: 5}, {x: 3.5, y: 7},{x: 3.5, y: 7}]
       },
       {
         label: 'somethingB',
-        values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8},{x: 3.5, y: 7},]
+        values: [{x: 1, y: 5}, {x: 1.5, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8},{x: 3.5, y: 7},]
       }
     ]});
   }

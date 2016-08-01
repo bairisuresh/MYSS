@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from './SliderComponent'
 import Body from './BodyComponent'
 import InterActiveComponents from './DataGridComponent'
-import { ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
+import { ExpandableNavContainer, ExpandableNavbar,
     ExpandableNavMenu, ExpandableNavMenuItem, ExpandableNavPage,
     ExpandableNavToggleButton } from 'react-expandable-nav';
 

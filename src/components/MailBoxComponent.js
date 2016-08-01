@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import ActiveItem from './AiitemComponent';
 import Image from './ImageBgComponent';
 require('styles//MailBox.scss');
 
