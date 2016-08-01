@@ -65,7 +65,7 @@ var fundUserData;
    $(fundData).each(function(key,fundObj){
     fundUserData =  $.grep(reqUserData,function(userObj){
 
-        return fundObj.id === userObj.fund_id;
+        return fundObj.id === userObj.Fund;
 
       })
 
@@ -85,7 +85,7 @@ var fundUserData;
   render() {
 		return(
     <div className="datagrid-component">
-    
+
     <div className="container-flued">
 		<section className="row page-title-holder">
 			<div className="col-md-8">
@@ -100,14 +100,14 @@ var fundUserData;
 				<DropDownComponent handleChange={this.handleChange}/>
 			</div>
 		</section>
-		
-		 <DataGrid results={this.state.reqGridData} showSettings={true}
-    sortAscendingComponent={<span className="fa fa-sort-alpha-asc"></span>}
-  sortDescendingComponent={<span className="fa fa-sort-alpha-desc"></span>}
-    showFilter={true} columns={["fund_id", "fund_name","dual_prcng_bss_cd","nav_per_shr_amt","priorday_to_input_dt_nav_prs","nav_pershr_chg_amt","perc_chg_nav_prs_by_day","tot_nav_amt","perc_total_net_assets","tot_mkt_val_amt","shrs_unt_ots_qty","crncy_cd_base","price_dt"]}/>
+
+        <DataGrid results={this.state.reqGridData} showSettings={true}
+        sortAscendingComponent={<span className="fa fa-sort-alpha-asc"></span>}
+      sortDescendingComponent={<span className="fa fa-sort-alpha-desc"></span>}
+        showFilter={true} columns={["Fund","Asset Class","Security Name","CUSIP#","Shares/Par","Base Total Market Value","Local Trade Market Value","OTC Record Type","Trade Source Name","Underlying Country Code","Underaying Susip Number","Base Total Cost","Currency Code","Base Premium Amount","month"]}/>
 		</div>
 	</div>
- 
+
 	);
 	}
 });

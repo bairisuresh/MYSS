@@ -46,6 +46,8 @@ var  DropDownComponent = React.createClass ({
         <ReactUIDropdown
           label="Fund Groups"
           initialItems={data}
+          placeholder = "Fund Groups"
+          multiple= "false"
           onChange={this.handleDropdownChange}/>
       </div>
 	);
