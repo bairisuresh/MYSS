@@ -19,12 +19,9 @@
 		.right-nav{
 			width: 30%;
 			height:100%;
+			float:left;
 			border-left: 1px #f4f4f4;
-			float: left;
-			.bar-component{
-				height : 50%;
-			}
-			.barpn-component{
+			.height50{
 				height : 50%;
 			}
 		}	

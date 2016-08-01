@@ -20,8 +20,12 @@ class NavComponent extends React.Component {
             <WaveChart/>
           </div>
           <div className="right-nav">
-            <BarChart/>
-            <BarPnChart/>
+            <div className="height50">
+              <BarChart />
+            </div>
+            <div className="height50">
+              <BarPnChart />
+            </div>
           </div>
           </div>
       </div>
