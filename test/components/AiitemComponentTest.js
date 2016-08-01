@@ -9,7 +9,7 @@ import createComponent from 'helpers/shallowRenderHelper';
 
 import AiitemComponent from 'components//AiitemComponent.js';
 
-describe('AiitemComponent', () => {
+xdescribe('AiitemComponent', () => {
   let component;
 
   beforeEach(() => {
