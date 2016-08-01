@@ -23,8 +23,6 @@
 		.tradenews-img-component {
 			margin: 1%;
 			border-bottom: solid 1px #efeeee;
-			margin-left: -15px;
-			margin-right: -15px;
 
 			div:nth-child(2){
 				font-family: Arial;
@@ -42,4 +40,7 @@
 		}
 	}
 }
+}
+.tradenews-body>div{
+	width: 100%;
 }
