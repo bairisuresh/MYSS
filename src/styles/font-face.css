@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'DINOffc';
+  src: url('fonts/DINOffc.eot'); /* IE9 Compat Modes */
+  src: url('fonts/DINOffc.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/DINOffc.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/DINOffc.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/DINOffc.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/DINOffc.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+body{
+   font-family: 'DINOffc' !important;
+}

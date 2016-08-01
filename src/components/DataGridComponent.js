@@ -96,6 +96,65 @@ var fundUserData;
 			</div>
 		</section>
 		<section className="row">
+			<div className="col-md-12">
+				<div className="grid-boxes-holder">
+					<article className=" row">
+						<div className="col-md-7">
+							<ul className="list-inline select-box-list">
+								<li>
+									<select>
+										<option>Services</option>
+									</select>
+								</li>
+								<li>
+									<select>
+										<option>Accounting</option>
+									</select>
+								</li>
+								<li>
+									<select>
+										<option>Positions</option>
+									</select>
+								</li>
+								<li>
+									<select>
+										<option>3-12 Top Holdings IV pm SLB1</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+						<div className="col-md-5 clearfix">
+							<section className="pull-left">
+								<span className="modified-date">Last Modified: 20 July 2016</span>
+							</section>
+							<section className="text-right">
+								<ul className="list-inline icons-list">
+									<li>
+										<a href="javascript:void(0);" className="icon setting-icon"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" className="icon download-icon"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" className="icon refresh-icon"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" className="icon print-icon"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" className="icon dup-icon"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" className="icon save-icon"></a>
+									</li>
+								</ul>
+							</section>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section className="row">
 			<div className="col-md-6">
 				<DropDownComponent handleChange={this.handleChange}/>
 			</div>
