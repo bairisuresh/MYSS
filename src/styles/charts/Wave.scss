@@ -1,5 +1,21 @@
 .wave-component {
   padding: 0.5%;
   width: 99%;
-  height: 80.5%
+  height: 99.5%;
+  .wave-component-area{
+  	height: 90%;
+  }
+  .wave-component-gb{
+  	height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  	 .button-1{
+
+	  }
+	  .button-2{
+
+	  }
+  }
+
 }

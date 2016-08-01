@@ -17,7 +17,9 @@ class NavComponent extends React.Component {
           <div className="chart-nav-body">
           <div className="left-nav">
             <MSlider/>
-            <WaveChart/>
+            <div className="wave-chart-height">
+              <WaveChart/>
+            </div>
           </div>
           <div className="right-nav">
             <div className="height50">

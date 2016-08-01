@@ -18,6 +18,8 @@ class WaveComponent extends React.Component {
         values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8}]
       }
     ]};
+    this.firstGraph = this.firstGraph.bind(this);
+    this.secondGraph = this.secondGraph.bind(this);
   }
   updateDimensions(callback) {
       callback({width: Math.round($(".wave-component").width()), height: Math.round($(".wave-component").height())});
@@ -28,10 +30,10 @@ class WaveComponent extends React.Component {
       var that = this;
       window.addEventListener("resize", function(){
         that.updateDimensions(function(stateObj){
-          that.setState(stateObj);
+          that.setState({alignment:stateObj,waveValues:that.state.waveValues});
         });
       });
-      setInterval(function(){
+      /*setInterval(function(){
         console.log("setInterval callback"+(new Date().getUTCSeconds() % 2));
         if(new Date().getUTCSeconds() % 2){
           console.log("setInterval callback odd");
@@ -59,7 +61,31 @@ class WaveComponent extends React.Component {
           ]})  
         }
         
-      },1000)
+      },1000)*/
+  }
+  secondGraph(){
+    this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
+      {
+        label: 'somethingA',
+        values: [{x: 0, y: 2}, {x: 1.3, y: 8}, {x: 3, y: 5}, {x: 3.5, y: 7}]
+      },
+      {
+        label: 'somethingB',
+        values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 8}]
+      }
+    ]});
+  }
+  firstGraph(){
+    this.setState({alignment : {width: Math.round($(".wave-component").width()-60), height: Math.round($(".wave-component").height()-60)},waveValues:[
+      {
+        label: 'somethingA',
+        values: [{x: 0, y: 0}, {x: 1.3, y: 8}, {x: 3, y: 0}, {x: 3.5, y: 7}]
+      },
+      {
+        label: 'somethingB',
+        values: [{x: 0, y: 5}, {x: 1.3, y: 9}, {x: 3, y: 7}, {x: 3.5, y: 0}]
+      }
+    ]}) 
   }
   render() {
 
@@ -69,13 +95,19 @@ class WaveComponent extends React.Component {
     console.log("waveValues "+this.state.waveValues);
     return (
       <div className="wave-component">
-      {
-        <AreaChart
-                data={this.state.waveValues}
-                width={this.state.alignment.width||650}
-                height={this.state.alignment.height||320}
-                margin={{top: 10, bottom: 50, left: 50, right: 10}}/>
-      }
+      <div className="wave-component-area">
+        {
+          <AreaChart
+                  data={this.state.waveValues}
+                  width={this.state.alignment.width||650}
+                  height={this.state.alignment.height||320}
+                  margin={{top: 10, bottom: 50, left: 50, right: 10}}/>
+        }
+        </div>
+      <div className="wave-component-gb">
+        <button type="button" className="btn btn-primary" onClick={this.firstGraph}>Graph One</button>
+        <button type="button" className="btn btn-primary" onClick={this.secondGraph}>Graph Two</button>
+      </div>
       </div>
     );
   }
