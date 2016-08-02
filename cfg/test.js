@@ -16,7 +16,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'isparta-instrumenter-loader',
         include: [
-          path.join(__dirname, '/../src')
+          path.join(__dirname, '/../src/components')
         ]
       }
     ],
@@ -31,7 +31,7 @@ module.exports = {
         include: [].concat(
           baseConfig.additionalPaths,
           [
-            path.join(__dirname, '/../src'),
+            path.join(__dirname, '/../src/components'),
             path.join(__dirname, '/../test')
           ]
         )
