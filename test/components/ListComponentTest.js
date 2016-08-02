@@ -9,7 +9,7 @@ import createComponent from 'helpers/shallowRenderHelper';
 
 import ListComponent from 'components//ListComponent.js';
 
-xdescribe('ListComponent', () => {
+describe('ListComponent', () => {
   let component;
 
   beforeEach(() => {
