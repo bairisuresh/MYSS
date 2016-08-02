@@ -47,13 +47,13 @@ var InnerAccordionComponent = React.createClass({
     return (
       <div className="main">
         <Section title="Income">
-            <ListData handleChange={this.handleChange.bind(this)} title={"income"}/>
+            <ListData handleChange={this.handleChange} title={"income"}/>
         </Section>
         <Section title="Positions">
-            <ListData handleChange={this.handleChange.bind(this)} title={"positions"}/>
+            <ListData handleChange={this.handleChange} title={"positions"}/>
         </Section>
         <Section title="Trades">
-            <ListData handleChange={this.handleChange.bind(this)} title={"trades"}/>
+            <ListData handleChange={this.handleChange} title={"trades"}/>
         </Section>
       </div>
     );
