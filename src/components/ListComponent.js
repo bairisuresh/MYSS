@@ -13,10 +13,14 @@ var  ListComponent = React.createClass ({
     },
   render: function() {
     var that = this;
+
+
     return (
       <div className="list-component">
         <ListGroup >
           {
+
+
             this.props.data.listdata.map(function(list) {
               return (
                   <ListGroupItem key={list.id}>
