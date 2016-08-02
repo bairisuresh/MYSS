@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import $ from "jquery";
 
 require('styles/charts/BarPn.scss');
 import Dimensions from 'react-dimensions'

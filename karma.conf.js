@@ -12,12 +12,12 @@ module.exports = function(config) {
     ],
     port: 8000,
     captureTimeout: 60000,
-    frameworks: [ 'mocha', 'chai' ],
+    frameworks: [ 'mocha', 'chai',],
     client: {
       mocha: {}
     },
     singleRun: true,
-    reporters: [ 'mocha', 'coverage' ],
+    reporters: [ 'mocha', 'coverage'],
     preprocessors: {
       'test/loadtests.js': [ 'webpack', 'sourcemap' ]
     },

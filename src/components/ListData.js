@@ -1,5 +1,6 @@
 import React from 'react';
 import ListComponent from './ListComponent';
+import $ from "jquery";
 
 var  ListData = React.createClass ({
 

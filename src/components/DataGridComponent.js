@@ -3,6 +3,7 @@
 import React from 'react'
 import DataGrid from '../config/griddle-react'
 import BreadCrumb from './BCrumbComponent'
+import $ from "jquery";
 require('styles//DataGrid.scss');
 //import ReactDOM from 'react-dom';
 import DropDownComponent from './DropDownComponent';
