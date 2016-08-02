@@ -6,6 +6,10 @@
     padding: 0 15px;
     .select-box-list{
       margin: 0;
+      padding: 0%; 
+      list-style: none; 
+      background-color: inherit; 
+      border-radius: 0px; 
       li{
         position: relative;
         margin: 0 30px 0 0;
@@ -27,6 +31,9 @@
             content: none;
           }
         }
+      }
+      li+li:before{
+        content: none;
       }
       select{
         background: transparent;

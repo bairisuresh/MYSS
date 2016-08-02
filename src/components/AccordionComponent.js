@@ -6,22 +6,21 @@ import InnerAccordionComponent from './InnerAccordionComponent'
 require('styles//Accordion.scss');
 
 class AccordionComponent extends React.Component {
-    recordValue(value) {
-        this.props.recordValue(value);
-    }
+  recordValue(value) {
+      this.props.recordValue(value);
+  }
   render() {
+    var that = this;
     return (
       <div className="accordion-component">
           <Accordion>
-             <Panel header="Accounting" eventKey="1">
-                 <InnerAccordionComponent recordValue={this.recordValue.bind(this)}/>
-             </Panel>
-             <Panel header="Custody" eventKey="2">
-                 <InnerAccordionComponent recordValue={this.recordValue.bind(this)}/>
-             </Panel>
-             <Panel header="Investment RecordKeeping" eventKey="3">
-                 <InnerAccordionComponent recordValue={this.recordValue.bind(this)}/>
-             </Panel>
+          {
+            this.props.accordionArry.map(function(data){
+              return(<Panel header={[data.aName]} eventKey={data.eventKey}>
+                 <InnerAccordionComponent title={[data.aName]} recordValue={that.recordValue.bind(that)}/>
+             </Panel>)
+            })
+          }
             </Accordion>
       </div>
     );
@@ -32,6 +31,13 @@ AccordionComponent.displayName = 'AccordionComponent';
 
 // Uncomment properties you need
 // AccordionComponent.propTypes = {};
-// AccordionComponent.defaultProps = {};
+AccordionComponent.defaultProps = {
+  accordionArry :[{aName :"Accounting",
+    eventKey : "1"},
+    {aName :"Custody",
+    eventKey : "2"},
+    {aName :"Investment RecordKeeping",
+    eventKey : "3"}]
+};
 
 export default AccordionComponent;

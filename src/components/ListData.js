@@ -31,7 +31,7 @@ var  ListData = React.createClass ({
     },
 
   render() {
-    return <ListComponent  handleChange={this.handleChange.bind(this)} data={this.state.data}/>;
+    return <ListComponent title = {this.props.titleArray} handleChange={this.handleChange.bind(this)} data={this.state.data}/>;
   }
 });
 

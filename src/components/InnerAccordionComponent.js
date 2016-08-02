@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ListData from './ListData'
+import ihelper from 'immutability-helper';
 require('styles//InnerAccordion.scss');
 
 var Section = React.createClass({
@@ -44,17 +45,17 @@ var InnerAccordionComponent = React.createClass({
         this.props.recordValue(value);
     },
   render: function() {
+    var that = this;
     return (
       <div className="main">
-        <Section title="Income">
-            <ListData handleChange={this.handleChange.bind(this)} title={"income"}/>
-        </Section>
-        <Section title="Positions">
-            <ListData handleChange={this.handleChange.bind(this)} title={"positions"}/>
-        </Section>
-        <Section title="Trades">
-            <ListData handleChange={this.handleChange.bind(this)} title={"trades"}/>
-        </Section>
+       {
+        this.props.iaccordionArry.map(function(data){
+          var title = ihelper(that.props.title,{$push:[data.iaName]});
+          return(<Section title={data.iaName}>
+              <ListData titleArray={title} handleChange={that.handleChange.bind(that)} title={data.iaName}/>
+          </Section>)
+        })
+      }
       </div>
     );
   }
@@ -64,6 +65,13 @@ InnerAccordionComponent.displayName = 'InnerAccordionComponent';
 
 // Uncomment properties you need
 // InnerAccordionComponent.propTypes = {};
-// InnerAccordionComponent.defaultProps = {};
+InnerAccordionComponent.defaultProps = {
+  iaccordionArry :[{iaName :"income",
+    ieventKey : "1"},
+    {iaName :"positions",
+    ieventKey : "2"},
+    {iaName :"trades",
+    ieventKey : "3"}]
+};
 
 export default InnerAccordionComponent;
