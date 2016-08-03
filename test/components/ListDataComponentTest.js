@@ -21,12 +21,10 @@ describe('ListDataComponent', () => {
     let that = this;
     fakeData = (() => {return {titleArray : ["Accounting","income"],propTitle : "income",handleChangeFun:function(){
     },cClassName : "list-component"}});
-    console.log("facking data:: ",fakeData());
     component = TestUtils.renderIntoDocument(<ListData titleArray={fakeData().titleArray}  title={fakeData().propTitle}/>);
   });
 
   it('ListData Comp exists on Document', () => {
-    console.log("componentld** ",component);
     let div = TestUtils.findRenderedDOMComponentWithClass(component,fakeData().cClassName );
     expect($(div).attr('class')).toEqual(fakeData().cClassName);
   });
