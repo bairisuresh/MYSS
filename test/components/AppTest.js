@@ -4,21 +4,17 @@
 'use strict';
 
 // Uncomment the following lines to use the react test utilities
-// import React from 'react/addons';
-// const TestUtils = React.addons.TestUtils;
+import React from 'react';
+import expect from 'expect';
+import App from 'components/App.js';
 import createComponent from 'helpers/shallowRenderHelper';
-
-import App from 'components/App';
 
 describe('AppComponent', () => {
   let AppComponent;
-
-  beforeEach(() => {
-    AppComponent = createComponent(App);
-  });
-
-  it('should have its component rendering id as app', () => {
-    expect(AppComponent.props.id).to.equal('myssApp');
+  it('AppComponent should match with the given id', () => {
+  	AppComponent = createComponent(App);
+  	console.log("component id is ",AppComponent.props.id);
+  	expect(AppComponent.props.id).toEqual('myssApp',"Equality Check");
   });
 });
 

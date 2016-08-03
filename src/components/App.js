@@ -1,6 +1,6 @@
-import React from 'react'
-import Header from './HeaderComponent'
-import SideNavComponent from './SideNavComponent'
+import React from 'react';
+import Header from './HeaderComponent';
+import SideNavComponent from './SideNavComponent';
 require('styles//App.scss');
 const App = () => (
   <div id="myssApp" className="app-component">

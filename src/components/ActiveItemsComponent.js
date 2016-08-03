@@ -127,7 +127,6 @@ class ActiveItemsComponent extends React.Component {
       }
     }
   render() {	
-  //console.log("state is: "+JSON.stringify(this.getState()));
     return (
       <div className="activeitems-component">
 		<div className="activeitems-header">

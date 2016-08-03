@@ -17,7 +17,6 @@ var SideBar = React.createClass({
   recordValue: function(value) {
       this.props.gridData(value);
       this.state.data.listdata.push(value);
-      console.log("came", value)
   },
   render: function() {
     var sidebarClass = this.props.isOpen ? 'sidebar open' : 'sidebar';

@@ -2,6 +2,8 @@
 
 import React from 'react'
 import DataGrid from '../config/griddle-react'
+import BreadCrumb from './BcrumbComponent'
+import $ from "jquery";
 require('styles//DataGrid.scss');
 //import ReactDOM from 'react-dom';
 import DropDownComponent from './DropDownComponent';
@@ -36,7 +38,6 @@ var  DataGridComponent = React.createClass ({
       success: function(data) {
         userData = data;
         reqUserData = userData.DataResponse.Rows.Row;
-        console.log("aaaa",reqUserData);
 
       }.bind(this),
       error: function(xhr, status, err) {
@@ -83,6 +84,8 @@ var fundUserData;
 
   },
   render() {
+  	var that = this;
+  	console.log("Interactive compu ",this.props.data);
 		return(
     <div className="datagrid-component">
 
@@ -100,28 +103,7 @@ var fundUserData;
 				<div className="grid-boxes-holder">
 					<article className=" row">
 						<div className="col-md-7">
-							<ul className="list-inline select-box-list">
-								<li>
-									<select>
-										<option>Services</option>
-									</select>
-								</li>
-								<li>
-									<select>
-										<option>Accounting</option>
-									</select>
-								</li>
-								<li>
-									<select>
-										<option>Positions</option>
-									</select>
-								</li>
-								<li>
-									<select>
-										<option>3-12 Top Holdings IV pm SLB1</option>
-									</select>
-								</li>
-							</ul>
+							<BreadCrumb titles={that.props.data.title}/>
 						</div>
 						<div className="col-md-5 clearfix">
 							<section className="pull-left">

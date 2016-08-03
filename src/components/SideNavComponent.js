@@ -25,8 +25,10 @@ import { ExpandableNavContainer, ExpandableNavbar,
   },
   gridData: function(data){
       this.setState({sidebarOpen: false});
+      currentcontent = <InterActiveComponents data={data}/>
       this.setState({data: data});
-      currentcontent = <InterActiveComponents data={this.state.data}/>
+      console.log("data is ",data);
+
   },
     render() {
       var menuItems = {

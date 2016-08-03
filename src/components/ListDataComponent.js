@@ -1,5 +1,6 @@
 import React from 'react';
 import ListComponent from './ListComponent';
+import $ from "jquery";
 
 var  ListData = React.createClass ({
 
@@ -31,7 +32,7 @@ var  ListData = React.createClass ({
     },
 
   render() {
-    return <ListComponent  handleChange={this.handleChange.bind(this)} data={this.state.data}/>;
+    return <ListComponent title = {this.props.titleArray} handleChange={this.handleChange.bind(this)} data={this.state.data}/>;
   }
 });
 
