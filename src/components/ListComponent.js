@@ -19,11 +19,13 @@ var  ListComponent = React.createClass ({
       <div className="list-component">
         <ListGroup >
           {
+
+
             this.props.data.listdata.map(function(list) {
               if(that.props.title){
                 var title = ihelper(that.props.title,{$push:[list.activityName]});
               }
-              
+
               list.title = title;
               return (
                   <ListGroupItem key={list.id}>
