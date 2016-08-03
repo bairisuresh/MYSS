@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Dimensions from 'react-dimensions'
+import $ from "jquery";
 
 require('styles/charts/Wave.scss');
 

@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ListData from './ListData'
+import ListData from './ListDataComponent'
 import ihelper from 'immutability-helper';
 require('styles//InnerAccordion.scss');
 
