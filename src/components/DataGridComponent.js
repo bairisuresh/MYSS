@@ -2,7 +2,7 @@
 
 import React from 'react'
 import DataGrid from '../config/griddle-react'
-import BreadCrumb from './BCrumbComponent'
+import BreadCrumb from './BcrumbComponent'
 import $ from "jquery";
 require('styles//DataGrid.scss');
 //import ReactDOM from 'react-dom';
