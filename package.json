@@ -78,6 +78,7 @@
     "jquery": "^3.1.0",
     "lodash": "^4.14.0",
     "normalize.css": "^4.0.0",
+    "nuka-carousel": "^2.0.2",
     "object-assign": "^4.1.0",
     "react": "^15.0.0",
     "react-bootstrap": "^0.29.5",
@@ -90,6 +91,7 @@
     "react-headroom": "^2.1.1",
     "react-motion-menu": "^0.2.2",
     "react-redux": "^4.4.5",
+    "react-slick": "^0.12.2",
     "react-tab-panel": "^2.2.2",
     "react-ui-dropdown": "^0.3.4",
     "redux": "^3.5.2"

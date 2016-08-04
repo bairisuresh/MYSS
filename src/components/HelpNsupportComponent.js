@@ -19,10 +19,10 @@ class HelpNsupportComponent extends React.Component {
                 Mauris quis scelerisque orci
               </div>
               <div className="col-md12 helpnsupport-body">
-                Con vallis sem pellentesque sitorem ipsum dolor sit ametntesque lorem ipsum dolor sit amet sit. Mauris quis
+                Con vallis sem pellentesque sitorem ipsum dolor sit ametntesque lorem ipsum dolor sit amet quis
               </div>
               <div className="col-md12 helpnsupport-body">
-                Mauris quis scelerisque orcion vallis sem pellelerisque orci
+                Mauris quis scelerisque orcion vallis sem pellelerisque orci
               </div>
                 <div className="layer">
                       <img src="/images/helpnsupport.png" width="100%" height="100%"/>
