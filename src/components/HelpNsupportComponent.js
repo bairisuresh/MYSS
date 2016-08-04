@@ -15,24 +15,18 @@ class HelpNsupportComponent extends React.Component {
               	<input placeholder="Search here" type="search"/>
               </div>
             </div>
-            <div>
               <div className="col-md12 helpnsupport-body">
                 Mauris quis scelerisque orci
               </div>
               <div className="col-md12 helpnsupport-body">
-                Lorem Ipsum
+                Con vallis sem pellentesque sitorem ipsum dolor sit ametntesque lorem ipsum dolor sit amet sit. Mauris quis
               </div>
               <div className="col-md12 helpnsupport-body">
-                Lorem Ipsum
-              </div><div className="col-md12 helpnsupport-body">
-                Lorem Ipsum
+                Mauris quis scelerisque orcion vallis sem pellelerisque orci
               </div>
-            </div>
-            <div className="layer">
-                <div className="Rectangle-310">
-                  <img src="/images/helpnsupport.png" width="100%" height="100%"/>
+                <div className="layer">
+                      <img src="/images/helpnsupport.png" width="100%" height="100%"/>
                 </div>
-            </div>
           </div>
 
           <div tabTitle="What's New">
