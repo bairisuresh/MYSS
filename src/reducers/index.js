@@ -7,6 +7,29 @@
  *          you edit them, they are not updated again.
  */
 import { combineReducers } from 'redux';
+import {actions} from '../actions/const'
 /* Populated by react-webpack-redux:reducer */
-const reducers = {};
-module.exports = combineReducers(reducers);
+const reducers = {
+	stateOne : "Home",
+	stateTwo : "Grid"
+};
+const initialState = {
+	stateOne : "Home"
+}
+function ssReducer(state = initialState, action) {
+  switch (action.type) {
+    case actions.NAV_HOME:
+      return Object.assign({}, state, {
+        actionPlan: action.type
+      })
+    	break;
+    case actions.NAV_GRID:
+    	return Object.assign({}, state, {
+        actionPlan: action.type
+      })
+    break;
+    default:
+      return state
+  }
+}
+module.exports = combineReducers({ssReducer});

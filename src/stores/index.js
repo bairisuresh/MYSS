@@ -1,5 +1,6 @@
 const redux = require('redux');
 const reducers = require('../reducers');
+import {navigateToHome, navigateToGrid} from '../actions/const';
 
 module.exports = function(initialState) {
   const store = redux.createStore(reducers, initialState)
@@ -13,4 +14,6 @@ module.exports = function(initialState) {
   }
 
   return store
-}
+};
+store.dispatch(navigateToHome());
+store.dispatch(navigateToGrid());

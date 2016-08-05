@@ -5,7 +5,7 @@ import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import MotionMenuComponent from './MotionMenuComponent'
 import ihelper from 'immutability-helper';
-import { Col, Row } from 'react-bootstrap/lib'
+import { Col, Row } from 'react-bootstrap/lib';
 require('styles//List.scss');
 
 var  ListComponent = React.createClass ({
@@ -19,13 +19,10 @@ var  ListComponent = React.createClass ({
       <div className="list-component">
         <ListGroup >
           {
-
-
             this.props.data.listdata.map(function(list) {
               if(that.props.title){
                 var title = ihelper(that.props.title,{$push:[list.activityName]});
               }
-
               list.title = title;
               return (
                   <ListGroupItem key={list.id}>

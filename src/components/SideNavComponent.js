@@ -5,9 +5,10 @@ import InterActiveComponents from './DataGridComponent'
 import { ExpandableNavContainer, ExpandableNavbar,
     ExpandableNavMenu, ExpandableNavMenuItem, ExpandableNavPage,
     ExpandableNavToggleButton } from 'react-expandable-nav';
+import {browserHistory} from 'react-router';
 
   require('styles//SideNav.scss');
-  var currentcontent = <Body />;
+  var currentcontent = <Body/>;
   var SideNavComponent = React.createClass({
 
   getInitialState: function(){
@@ -25,9 +26,10 @@ import { ExpandableNavContainer, ExpandableNavbar,
   },
   gridData: function(data){
       this.setState({sidebarOpen: false});
-      currentcontent = <InterActiveComponents data={data}/>
+      // currentcontent = <InterActiveComponents data={data}/>
       this.setState({data: data});
       console.log("data is ",data);
+      browserHistory.push('/grid')
 
   },
     render() {
@@ -65,7 +67,7 @@ import { ExpandableNavContainer, ExpandableNavbar,
           <ExpandableNavPage fullStyle={navPageStyle.full} smallStyle={navPageStyle.small}>
                 <SideBar gridData={this.gridData} closeHandler={this.closeHandler} isOpen={this.state.sidebarOpen} />
                 <div className="main-content">
-                {currentcontent}
+                {this.props.children}
                 </div>
 
           </ExpandableNavPage>
