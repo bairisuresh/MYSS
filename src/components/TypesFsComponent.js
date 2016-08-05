@@ -9,21 +9,32 @@ class TypesFsComponent extends React.Component {
     return (
       <div className="typesfs-component">
          <Carousel slidesToShow={3}>
+            <div>
             <Carousel className="sample">
                 <img src="images/accounting.png"/>
                 <img src="images/custody.png"/>
                 <img src="images/ifs.png" />
             </Carousel>
-            <img src="images/custody.png" />
+            </div>
+            <div>
+            <Carousel className="sample">
+                <img src="images/custody.png"/>
+                <img src="images/accounting.png"/>
+            </Carousel>
+            </div>
+            <div>
             <Carousel className="sample">
                 <img src="images/ifs.png" />
                 <img src="images/irk.png" />
             </Carousel>
+            </div>
+            <div>
             <Carousel className="sample">
                 <img src="images/irk.png" />
                 <img src="images/accounting.png"/>
                 <img src="images/ifs.png" />
             </Carousel>
+            </div>
         </Carousel>
       </div>
     );
